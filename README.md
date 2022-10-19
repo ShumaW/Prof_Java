@@ -8,7 +8,7 @@ Homework_10.10.2022
 
 Homework_17.10.2022
 
--[Main.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017/src/Main.java)
--[Route.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017/src/Route.java)
--[MyDateTime.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017/src/MyDateTime.java)
--[Ticket.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017/src/Ticket.java)
+- [Main.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017/src/Main.java)
+- [Route.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017/src/Route.java)
+- [MyDateTime.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017/src/MyDateTime.java)
+- [Ticket.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017/src/Ticket.java)
