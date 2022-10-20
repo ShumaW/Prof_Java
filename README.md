@@ -2,11 +2,11 @@
 
 Homework_05.10.2022 - [Main.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221005/src/Main.java)
 
-Homework_10.10.2022
+Homework_10.10.2022 - AUTO
  - [Main.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221010/src/Main.java)
  - [Auto.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221010/src/Auto.java)
 
-Homework_17.10.2022
+Homework_17.10.2022 - Tickets
 
 - [Main.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017/src/Main.java)
 - [Route.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017/src/Route.java)

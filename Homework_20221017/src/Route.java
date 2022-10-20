@@ -1,8 +1,8 @@
 public class Route {
-    String number;
-    String from;
-    String destination;
-    long distance;
+    private String number;
+    private String from;
+    private String destination;
+    private long distance;
 
     public Route(String number, String from, String destination, long distance) {
         this.number = number;

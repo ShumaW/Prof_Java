@@ -1,7 +1,7 @@
 public class Ticket {
     private Route route;
     private MyDateTime time;
-   private double price;
+    private double price;
 
     public Ticket(Route route, MyDateTime time, double price) {
         this.route = route;
@@ -29,4 +29,18 @@ public class Ticket {
     public double getPrice() {
         return price;
     }
+
+    public long getDistance1() {
+        return route.getDistance();
+    }
+
+    public void setNewHours(int hour) {
+        time.setHour(hour);
+    }
+
+    public void setNewMin (int min){
+        time.setMin(min);
+    }
+
+
 }
