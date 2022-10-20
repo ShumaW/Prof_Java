@@ -17,7 +17,7 @@ Level 1 - Tickets
 
 Level 2 - Shop
 
-- [Main.java]()
-- [Tool.java]()
-- [ElectricTool.java]()
-- [ManualTool.java]()
+- [Main.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017_lvl2/src/Main.java)
+- [Tool.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017_lvl2/src/Tool.java)
+- [ElectricTool.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017_lvl2/src/ElectricTool.java)
+- [ManualTool.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017_lvl2/src/ManualTool.java)
