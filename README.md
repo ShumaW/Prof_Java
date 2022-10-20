@@ -6,9 +6,18 @@ Homework_10.10.2022 - AUTO
  - [Main.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221010/src/Main.java)
  - [Auto.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221010/src/Auto.java)
 
-Homework_17.10.2022 - Tickets
+Homework_17.10.2022
+
+Level 1 - Tickets
 
 - [Main.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017/src/Main.java)
 - [Route.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017/src/Route.java)
 - [MyDateTime.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017/src/MyDateTime.java)
 - [Ticket.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017/src/Ticket.java)
+
+Level 2 - Shop
+
+- [Main.java]()
+- [Tool.java]()
+- [ElectricTool.java]()
+- [ManualTool.java]()

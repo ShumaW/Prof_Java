@@ -21,18 +21,6 @@ public class Route {
                 '}';
     }
 
-    public String getNumber() {
-        return number;
-    }
-
-    public String getFrom() {
-        return from;
-    }
-
-    public String getDestination() {
-        return destination;
-    }
-
     public long getDistance() {
         return distance;
     }

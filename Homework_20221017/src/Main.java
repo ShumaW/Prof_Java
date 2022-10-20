@@ -15,7 +15,7 @@ public class Main {
             e)      Реализовать в билете метод изменения времени отправления.
 
          */
-        //a)      создать несколько разных билетов, положить их в массив.
+
         Ticket t1 = new Ticket(new Route("4ab", "Днепр", "Вена", 1800), new MyDateTime(7, 11, 2022, 21, 30), 367);
 
         Ticket[] tic = {
@@ -25,27 +25,23 @@ public class Main {
                 new Ticket(new Route("3db", "Вена", "Париж", 1003), new MyDateTime(31, 3, 2023, 05, 46), 68)
         };
 
-        // b)      Реализовать метод, который выводит информацию обо всех билетах
 
+        System.out.println("------------------ Level 1 -------------------------");
+
+        System.out.println("-------------- b ---------------");
         for (Ticket t : tic) {
             System.out.println(t);
         }
 
-        System.out.println("-----------------------------");
+        System.out.println("-------------- c ---------------");
         System.out.println(sumAllPrices(tic));
-        System.out.println("-----------------------------");
+        System.out.println("-------------- d ---------------");
         System.out.println(sumDistance(tic));
-        System.out.println("-----------------------------");
-
-        // e)      Реализовать в билете метод изменения времени отправления.
+        System.out.println("-------------- e ---------------");
         t1.setNewHours(22);
         t1.setNewMin(45);
         System.out.println(t1);
-
-
     }
-
-    // c)      Реализовать метод, который считает суммарную стоимость билетов.
 
     public static double sumAllPrices(Ticket[] arr) {
         double sum = 0;
@@ -55,8 +51,7 @@ public class Main {
         }
         return sum;
     }
-    //d)      Необходимо посчитать суммарную дистанцию всех маршрутов (предположим, что у вас нет
-    //билетов с одним и тем же маршрутом, т.е. задача сводится к простому суммированию всех distance)
+
 
     public static int sumDistance(Ticket[] arr) {
         int sum = 0;
