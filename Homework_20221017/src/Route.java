@@ -13,10 +13,7 @@ public class Route {
 
     @Override
     public String toString() {
-        return "Route{" +
-                "number='" + number + '\'' +
-                ", from='" + from + '\'' +
-                ", destination='" + destination + '\'' +
+        return number + "  " + from + " - "  + destination  +
                 ", distance=" + distance +
                 '}';
     }

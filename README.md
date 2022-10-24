@@ -21,3 +21,11 @@ Level 2 - Shop
 - [Tool.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017_lvl2/src/Tool.java)
 - [ElectricTool.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017_lvl2/src/ElectricTool.java)
 - [ManualTool.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221017_lvl2/src/ManualTool.java)
+
+Homework_19.10.2022
+
+- [Main.java]()
+- [Goods.java]()
+- [Produkts.java]()
+- [Electronics.java]()
+- [Clothes.java]()

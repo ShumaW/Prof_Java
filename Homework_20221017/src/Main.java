@@ -29,9 +29,7 @@ public class Main {
         System.out.println("------------------ Level 1 -------------------------");
 
         System.out.println("-------------- b ---------------");
-        for (Ticket t : tic) {
-            System.out.println(t);
-        }
+        print(tic);
 
         System.out.println("-------------- c ---------------");
         System.out.println(sumAllPrices(tic));
@@ -41,6 +39,17 @@ public class Main {
         t1.setNewHours(22);
         t1.setNewMin(45);
         System.out.println(t1);
+        System.out.println("-------------- 24.10.2022 ---------------");
+        Tickets ticketsStorage = new Tickets(100);
+        ticketsStorage.add(new Ticket(new Route("1ab", "Днепр", "Берлин", 2000), new MyDateTime(15, 10, 2022, 14, 23), 256));
+        ticketsStorage.add(new Ticket(new Route("2ac", "Берлин", "Вена", 504), new MyDateTime(22, 8, 2022, 18, 46), 56));
+        System.out.println(ticketsStorage);
+    }
+
+    private static void print(Ticket[] tic) {
+        for (Ticket t : tic) {
+            System.out.println(t);
+        }
     }
 
     public static double sumAllPrices(Ticket[] arr) {
