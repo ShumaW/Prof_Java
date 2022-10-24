@@ -26,6 +26,6 @@ Homework_19.10.2022
 
 - [Main.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221019/src/Main.java)
 - [Goods.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221019/src/Goods.java)
-- [Products.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221019/src/Products.java)
+- [Produkts.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221019/src/Produkts.java)
 - [Electronics.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221019/src/Electronic.java)
 - [Clothes.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221019/src/Clothes.java)
