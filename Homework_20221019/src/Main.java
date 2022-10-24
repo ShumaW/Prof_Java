@@ -15,21 +15,23 @@ public class Main {
         Необходимо создать соответствующую структуру классов метод покупки товара
          */
 
-        Goods p1 = new Produkts("Orange",4.5,10);
-        Goods p2 = new Produkts("Banane",5.5,10);
-        Goods e1 = new Electronics("Samsung TV",560,10,0);
-        Goods m1 =new Mobile("iPhone 15",300,10,100);
-        Goods cl1 = new Clothes("T-shirt",15);
-        Goods cl2 =new Clothes("Trouthers",25);
+        Goods[] goods = {
+                new Produkts("Orange", 4.5, 10),
+                new Produkts("Banane", 5.5, 10),
+                new Electronics("Samsung TV", 560, 10, 0),
+                new Mobile("iPhone 15", 300, 10, 100),
+                new Clothes("T-shirt", 15),
+                new Clothes("Trouthers", 25)
+        };
 
-        p1.getGoods();
-        p2.getGoods();
-        e1.getGoods();
-        m1.getGoods();
-        cl1.getGoods();
-        cl2.getGoods();
+        print(goods);
 
 
+    }
 
+    private static void print(Goods[] goods) {
+        for (Goods g : goods) {
+            g.getGoods();
+        }
     }
 }
