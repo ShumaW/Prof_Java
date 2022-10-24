@@ -1,27 +1,20 @@
-public class Electronics extends Goods{
+public class Electronics extends Goods {
 
-    private double productWarranty;
-    private double priceOfContract;
+    protected double productWarranty;
+
 
     public Electronics(String name, double price, double productWarranty, double priceOfContract) {
         super(name, price);
         this.productWarranty = productWarranty;
-        this.priceOfContract = priceOfContract;
     }
 
-    private double priceWithQuarantee(){
+    public double priceWithQuarantee() {
         return price + (price * productWarranty);
     }
 
-    public void getGoods(){
+    public void getGoods() {
         System.out.println("The cost of " + name + " is " + priceWithQuarantee() + "$ , with " + productWarranty + "% of quarantee");
     }
 
-    private double priceWithContract (){
-        return price + priceOfContract;
-    }
 
-    public void getMobile(){
-        System.out.println("The cost of " + name + " is " + priceWithContract() + "$ , with " + priceOfContract + "$ price of contract with mobile services for one year.");
-    }
 }

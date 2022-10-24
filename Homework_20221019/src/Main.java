@@ -18,14 +18,14 @@ public class Main {
         Goods p1 = new Produkts("Orange",4.5,10);
         Goods p2 = new Produkts("Banane",5.5,10);
         Goods e1 = new Electronics("Samsung TV",560,10,0);
-        Goods m1 =new Electronics("iPhone 15",300,0,100);
+        Goods m1 =new Mobile("iPhone 15",300,10,100);
         Goods cl1 = new Clothes("T-shirt",15);
         Goods cl2 =new Clothes("Trouthers",25);
 
         p1.getGoods();
         p2.getGoods();
         e1.getGoods();
-        m1.getMobile();
+        m1.getGoods();
         cl1.getGoods();
         cl2.getGoods();
 
