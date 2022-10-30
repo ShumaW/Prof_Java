@@ -27,6 +27,16 @@ Homework_19.10.2022
 - [Main.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221019/src/Main.java)
 - [Goods.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221019/src/Goods.java)
 - [Produkts.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221019/src/Produkts.java)
-- [Electronics.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221019/src/Electronic.java)
+- [Electronics.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221019/src/Electronics.java)
 - [Clothes.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221019/src/Clothes.java)
 - [Mobile.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221019/src/Mobile.java)
+
+Homework_26.10.2022
+
+- [Main.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221026/src/Main.java)
+- [Basket.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221026/src/Basket.java)
+- [Goods.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221026/src/Goods.java)
+- [Produkts.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221026/src/Produkts.java)
+- [Electronics.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221026/src/Electronics.java)
+- [Clothes.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221026/src/Clothes.java)
+- [Mobile.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221026/src/Mobile.java)
