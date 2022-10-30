@@ -8,8 +8,10 @@ public class Electronics extends Goods {
         this.productWarranty = productWarranty;
     }
 
-    public double priceOfProdukt() {
-        return price + (price * (productWarranty / 100));
+
+    public double priceOfProdukt(){
+        super.price = price + (price * productWarranty / 100);
+        return price;
     }
 
     public void getGoods() {

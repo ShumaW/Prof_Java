@@ -1,9 +1,8 @@
-import java.util.Arrays;
-
 public class Basket {
     private Goods[] goodsArray;
     private int size;
     private int capacity;
+    private double price;
 
     public Basket(int capacity) {
         this.capacity = capacity;
@@ -33,10 +32,9 @@ public class Basket {
         System.out.println("Your goods are:");
         String res = "";
         for (int i = 0; i < goodsArray.length && i < size; i++) {
-            int counter = 1;
             res += goodsArray[i] + System.lineSeparator();
         }
-        res += "---------------" + System.lineSeparator() + "Total: " + size + " goods";
+        res += "---------------" + System.lineSeparator() + "Total: " + size + " goods" + System.lineSeparator() + "Total price : " + getTotalPrice(goodsArray) + "$";
         return res;
     }
 
@@ -49,10 +47,10 @@ public class Basket {
     }
 
 
-    public double getTotalPrice(Goods[] goodsArray) {
+    public double getTotalPrice(Goods[]arr) {
         double sum = 0;
-        for (int i = 0; i < goodsArray.length; i++) {
-            sum += goodsArray[i].price;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i].price;
         }
         return sum;
     }

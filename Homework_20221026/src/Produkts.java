@@ -7,7 +7,8 @@ public class Produkts extends Goods{
     }
 
     public double priceOfProdukt(){
-        return price + (price * (percentOfUrgency / 100));
+        super.price = price + (price * percentOfUrgency / 100);
+        return price;
     }
 
 

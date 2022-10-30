@@ -26,23 +26,26 @@ public class Main {
 
         Basket goodsInBasket = new Basket(1);
         goodsInBasket.add(new Produkts("Orange", 4.5, 10));
+
+
         goodsInBasket.add(new Electronics("Samsung TV", 560, 10, 0));
         goodsInBasket.add(new Mobile("iPhone 15", 300, 10, 100));
         goodsInBasket.add(new Clothes("Trouthers", 25));
-
-        System.out.println("------------------19.10.2022------------------");
-        print(goods);
-
-        System.out.println("------------------26.10.2022------------------");
-        System.out.println("------------------Your basket------------------");
         System.out.println(goodsInBasket);
+        System.out.println("---------------");
+//        System.out.println("------------------19.10.2022------------------");
+//        print(goods);
+
+//        System.out.println("------------------26.10.2022------------------");
+//        System.out.println("------------------Your basket------------------");
+//        System.out.println(goodsInBasket);
 
 
     }
 
     private static void print(Goods[] goods) {
         for (Goods g : goods) {
-            g.getGoods();
+            System.out.println(g);;
         }
     }
 }

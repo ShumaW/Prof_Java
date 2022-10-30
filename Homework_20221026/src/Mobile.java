@@ -7,8 +7,11 @@ public class Mobile extends Electronics{
         this.priceOfContract = priceOfContract;
     }
 
-    public double priceOfProdukt() {
-        return price  + (price * (productWarranty / 100)) + priceOfContract;
+
+
+    public double priceOfProdukt(){
+        super.price = price + (price * productWarranty / 100) + priceOfContract;
+        return price;
     }
 
     public void getGoods() {

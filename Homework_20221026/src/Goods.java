@@ -12,6 +12,9 @@ public class Goods {
     public void getGoods(){
     }
 
+    public double priceOfProdukt(){
+        return price;
+    }
 
 
 
