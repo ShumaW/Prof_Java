@@ -6,18 +6,18 @@ public class Produkts extends Goods{
         this.percentOfUrgency = percentOfUrgency;
     }
 
-    public double priceOfProdukt(){
+    public double getPriceOfProdukt(){
         super.price = price + (price * percentOfUrgency / 100);
         return price;
     }
 
 
     public void getGoods (){
-        System.out.println("The cost of " + name + " is " + priceOfProdukt() + "$ , including " + percentOfUrgency + "% for urgency");
+        System.out.println("The cost of " + name + " is " + getPriceOfProdukt() + "$ , including " + percentOfUrgency + "% for urgency");
     }
 
     public String toString(){
 
-        return name + " " + priceOfProdukt() + "$ , including " + percentOfUrgency + "% for urgency";
+        return name + " " + getPriceOfProdukt() + "$ , including " + percentOfUrgency + "% for urgency";
     }
 }

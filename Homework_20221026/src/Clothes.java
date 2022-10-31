@@ -11,5 +11,10 @@ public class Clothes extends Goods {
         return name + " " + price + "$";
     }
 
+    public double getPriceOfProdukt(){
+        super.price = price;
+        return price;
+    }
+
 
 }

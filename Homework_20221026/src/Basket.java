@@ -49,7 +49,7 @@ public class Basket {
 
     public double getTotalPrice(Goods[]arr) {
         double sum = 0;
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0;  i < size; i++) {
             sum += arr[i].price;
         }
         return sum;

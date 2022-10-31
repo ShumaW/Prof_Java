@@ -9,15 +9,15 @@ public class Mobile extends Electronics{
 
 
 
-    public double priceOfProdukt(){
-        super.price = price + (price * productWarranty / 100) + priceOfContract;
+    public double getPriceOfProdukt(){
+        this.price = super.getPriceOfProdukt() + priceOfContract;
         return price;
     }
 
     public void getGoods() {
-        System.out.println("The cost of " + name + " is " + priceOfProdukt() + "$ , including " + super.productWarranty + "% of quaranty and " + priceOfContract + "$ price of contract with mobile services for one year.");
+        System.out.println("The cost of " + name + " is " + this.getPriceOfProdukt() + "$ , including " + super.productWarranty + "% of quaranty and " + priceOfContract + "$ price of contract with mobile services for one year.");
     }
     public String toString(){
-        return name + " cost " + priceOfProdukt() + "$ , including " + super.productWarranty + "% of quaranty and " + priceOfContract + "$ price of contract with mobile services for one year." ;
+        return name + " cost " + this.getPriceOfProdukt() + "$ , including " + super.productWarranty + "% of quaranty and " + priceOfContract + "$ price of contract with mobile services for one year." ;
     }
 }

@@ -12,7 +12,7 @@ public class Goods {
     public void getGoods(){
     }
 
-    public double priceOfProdukt(){
+    public double getPriceOfProdukt(){
         return price;
     }
 

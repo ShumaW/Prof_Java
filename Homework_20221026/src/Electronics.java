@@ -9,17 +9,17 @@ public class Electronics extends Goods {
     }
 
 
-    public double priceOfProdukt(){
-        super.price = price + (price * productWarranty / 100);
+    public double getPriceOfProdukt(){
+        this.price = price + (price * productWarranty / 100);
         return price;
     }
 
     public void getGoods() {
-        System.out.println("The cost of " + name + " is " + priceOfProdukt() + "$ , including " + productWarranty + "% of quarantee");
+        System.out.println("The cost of " + name + " is " + getPriceOfProdukt() + "$ , including " + productWarranty + "% of quarantee");
     }
 
     public String toString(){
-        return name + " " + priceOfProdukt() + "$ , including " + productWarranty + "% of quarantee";
+        return name + " " + getPriceOfProdukt() + "$ , including " + productWarranty + "% of quarantee";
     }
 
 

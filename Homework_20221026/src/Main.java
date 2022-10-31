@@ -15,14 +15,14 @@ public class Main {
         Необходимо создать соответствующую структуру классов метод покупки товара
          */
 
-        Goods[] goods = {
-                new Produkts("Orange", 4.5, 10),
-                new Produkts("Banane", 5.5, 10),
-                new Electronics("Samsung TV", 560, 10, 0),
-                new Mobile("iPhone 15", 300, 10, 100),
-                new Clothes("T-shirt", 15),
-                new Clothes("Trouthers", 25)
-        };
+//        Goods[] goods = {
+//                new Produkts("Orange", 4.5, 10),
+//                new Produkts("Banane", 5.5, 10),
+//                new Electronics("Samsung TV", 560, 10, 0),
+//                new Mobile("iPhone 15", 300, 10, 100),
+//                new Clothes("T-shirt", 15),
+//                new Clothes("Trouthers", 25)
+//        };
 
         Basket goodsInBasket = new Basket(1);
         goodsInBasket.add(new Produkts("Orange", 4.5, 10));
@@ -30,7 +30,7 @@ public class Main {
 
         goodsInBasket.add(new Electronics("Samsung TV", 560, 10, 0));
         goodsInBasket.add(new Mobile("iPhone 15", 300, 10, 100));
-        goodsInBasket.add(new Clothes("Trouthers", 25));
+//        goodsInBasket.add(new Clothes("Trouthers", 25));
         System.out.println(goodsInBasket);
         System.out.println("---------------");
 //        System.out.println("------------------19.10.2022------------------");
@@ -43,9 +43,9 @@ public class Main {
 
     }
 
-    private static void print(Goods[] goods) {
-        for (Goods g : goods) {
-            System.out.println(g);;
-        }
-    }
+//    private static void print(Goods[] goods) {
+//        for (Goods g : goods) {
+//            System.out.println(g);;
+//        }
+//    }
 }
