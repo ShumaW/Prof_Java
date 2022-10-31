@@ -30,7 +30,7 @@ public class Main {
 
         goodsInBasket.add(new Electronics("Samsung TV", 560, 10, 0));
         goodsInBasket.add(new Mobile("iPhone 15", 300, 10, 100));
-//        goodsInBasket.add(new Clothes("Trouthers", 25));
+        goodsInBasket.add(new Clothes("Trouthers", 25));
         System.out.println(goodsInBasket);
         System.out.println("---------------");
 //        System.out.println("------------------19.10.2022------------------");

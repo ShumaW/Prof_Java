@@ -1,4 +1,4 @@
-public class Goods {
+public abstract class Goods {
     protected String name;
     protected double price;
 

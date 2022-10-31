@@ -28,6 +28,7 @@ public class Basket {
         goodsArray = arr;
     }
 
+    /*
     public String toString() {
         System.out.println("Your goods are:");
         String res = "";
@@ -36,7 +37,28 @@ public class Basket {
         }
         res += "---------------" + System.lineSeparator() + "Total: " + size + " goods" + System.lineSeparator() + "Total price : " + getTotalPrice(goodsArray) + "$";
         return res;
+
     }
+    */
+
+    // Метод StringBuilder и оператор .append
+    public String toString() {
+        System.out.println("Your goods are:");
+        StringBuilder res = new StringBuilder();
+        for (int i = 0; i < goodsArray.length && i < size; i++) {
+            res.append(goodsArray[i])
+                    .append(System.lineSeparator());
+        }
+        return res.append("---------------")
+                .append(System.lineSeparator())
+                .append("Total: " + size + " goods")
+                .append(System.lineSeparator())
+                .append("Total price : " + getTotalPrice(goodsArray) + "$")
+                .toString();
+
+    }
+
+
 
     public Goods get(int index) {
         if (index < size) {
@@ -47,9 +69,9 @@ public class Basket {
     }
 
 
-    public double getTotalPrice(Goods[]arr) {
+    public double getTotalPrice(Goods[] arr) {
         double sum = 0;
-        for (int i = 0;  i < size; i++) {
+        for (int i = 0; i < size; i++) {
             sum += arr[i].price;
         }
         return sum;
