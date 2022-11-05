@@ -1,7 +1,7 @@
 # Prof_Java_HomeWork
 
 Homework_05.10.2022
- 
+
 - [Main.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221005/src/Main.java)
 
 Homework_10.10.2022 - AUTO
@@ -46,9 +46,9 @@ Homework_26.10.2022
 
 Homework_02.11.2022_task_1
 
-- [Main.java]()
-- [Sender.java]()
-- [MailDeliveryService.java]()
-- [DHL.java]()
-- [Email.java]()
-- [Pigeon.java]()
+- [Main.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221102_j_1/src/Main.java)
+- [Sender.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221102_j_1/src/Sender.java)
+- [MailDeliveryService.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221102_j_1/src/MailDeliveryService.java)
+- [DHL.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221102_j_1/src/DHL.java)
+- [Email.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221102_j_1/src/Email.java)
+- [Pigeon.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221102_j_1/src/Pigeon.java)
