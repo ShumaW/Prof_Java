@@ -60,13 +60,13 @@ public class Basket {
 
 
 
-    public Goods get(int index) {
-        if (index < size) {
-            return goodsArray[index];
-        } else {
-            return null;
-        }
-    }
+//    public Goods get(int index) {
+//        if (index < size) {
+//            return goodsArray[index];
+//        } else {
+//            return null;
+//        }
+//    }
 
 
     public double getTotalPrice(Goods[] arr) {

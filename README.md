@@ -44,7 +44,9 @@ Homework_26.10.2022
 - [Clothes.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221026/src/Clothes.java)
 - [Mobile.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221026/src/Mobile.java)
 
-Homework_02.11.2022_task_1
+Homework_02.11.2022
+
+Task_1
 
 - [Main.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221102_j_1/src/Main.java)
 - [Sender.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221102_j_1/src/Sender.java)
@@ -52,3 +54,9 @@ Homework_02.11.2022_task_1
 - [DHL.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221102_j_1/src/DHL.java)
 - [Email.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221102_j_1/src/Email.java)
 - [Pigeon.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221102_j_1/src/Pigeon.java)
+
+Task_2
+
+- [Main.java]()
+- [EmployeesArr.java]()
+- [Employee.java]()
