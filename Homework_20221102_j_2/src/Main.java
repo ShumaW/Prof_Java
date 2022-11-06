@@ -18,10 +18,9 @@ public class Main {
         System.out.println("Для начала набора базы данных сотрудников введите фамилию и возраст.");
         int finish = 1;
         EmployeesArr empArr = new EmployeesArr(1);
-
+        Scanner scanner = new Scanner(System.in);
         while (finish != 2) {
             System.out.println("Введите фамилию работника:");
-            Scanner scanner = new Scanner(System.in);
             String lastName = scanner.next();
             System.out.println("Введите возраст работника:");
             int age = scanner.nextInt();
@@ -33,7 +32,7 @@ public class Main {
 
         }
         System.out.println(empArr); // я пытался вывести фамилию и возраст, но у меня так и не получилось
-
+        scanner.close();
 
     }
 }

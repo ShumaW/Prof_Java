@@ -12,8 +12,6 @@ public class EmployeesArr {
         size = 0;
     }
 
-    public EmployeesArr(Employee employee) {
-    }
 
     public boolean add(Employee emp) {
         if (size >= employeesArray.length) {
@@ -24,10 +22,6 @@ public class EmployeesArr {
         return true;
     }
 
-//    @Override
-//    public void add(EmployeesArr employeesArr) {
-//
-//    }
 
     private void enlarge() {
         Employee[] arr = new Employee[employeesArray.length * 2];
@@ -47,15 +41,7 @@ public class EmployeesArr {
                 .append(System.lineSeparator())
                 .append("Total: " + size + " employees")
                 .toString();
-                    }
-
-//    public Employee get(int index) {
-//        if (index < size) {
-//            return employeesArray[index];
-//        } else {
-//            return null;
-//        }
-//    }
+    }
 
 
 }
