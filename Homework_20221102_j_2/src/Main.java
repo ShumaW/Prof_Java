@@ -31,7 +31,7 @@ public class Main {
             finish = scanner.nextInt();
 
         }
-        System.out.println(empArr); // я пытался вывести фамилию и возраст, но у меня так и не получилось
+        System.out.println(empArr);
         scanner.close();
 
     }

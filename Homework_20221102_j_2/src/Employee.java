@@ -8,6 +8,11 @@ public class Employee {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return lastName + " " + age;
+    }
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
