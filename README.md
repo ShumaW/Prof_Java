@@ -57,6 +57,6 @@ Task_1
 
 Task_2
 
-- [Main.java]()
-- [EmployeesArr.java]()
-- [Employee.java]()
+- [Main.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221102_j_2/src/Main.java)
+- [EmployeesArr.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221102_j_2/src/EmployeesArr.java)
+- [Employee.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221102_j_2/src/Employee.java)
