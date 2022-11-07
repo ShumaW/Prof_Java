@@ -17,7 +17,7 @@ public class Main {
          */
         System.out.println("Для начала набора базы данных сотрудников введите фамилию и возраст.");
         int finish = 1;
-        EmployeesArr empArr = new EmployeesArr(1);
+        GetArray empArr = new EmployeesArr(1);
         Scanner scanner = new Scanner(System.in);
         while (finish != 2) {
             System.out.println("Введите фамилию работника:");

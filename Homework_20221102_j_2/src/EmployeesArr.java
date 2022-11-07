@@ -1,6 +1,4 @@
-import java.util.Arrays;
-
-public class EmployeesArr {
+public class EmployeesArr implements GetArray{
     private Employee[] employeesArray;
     private int size;
     private int capasity;
@@ -13,14 +11,14 @@ public class EmployeesArr {
     }
 
 
-    public boolean add(Employee emp) {
-        if (size >= employeesArray.length) {
-            enlarge();
-        }
-        employeesArray[size] = emp;
-        size++;
-        return true;
-    }
+//    public boolean add(Employee emp) {
+//        if (size >= employeesArray.length) {
+//            enlarge();
+//        }
+//        employeesArray[size] = emp;
+//        size++;
+//        return true;
+//    }
 
 
     private void enlarge() {
@@ -44,4 +42,13 @@ public class EmployeesArr {
     }
 
 
+    @Override
+    public boolean add(Employee emp) {
+        if (size >= employeesArray.length) {
+            enlarge();
+        }
+        employeesArray[size] = emp;
+        size++;
+        return true;
+    }
 }
