@@ -41,6 +41,7 @@ public class Main {
         t1.setNewHours(22);
         t1.setNewMin(45);
         System.out.println(t1);
+
     }
 
     public static double sumAllPrices(Ticket[] arr) {

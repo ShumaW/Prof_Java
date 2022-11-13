@@ -1,4 +1,9 @@
 public class Sender {
+//    private MailDeliveryService mailDeliveryService;
+//
+//    public Sender(MailDeliveryService mailDeliveryService){
+//        this.mailDeliveryService = mailDeliveryService;
+//    };
 
     public void send(int mail){
         if (mail == 1) {
@@ -11,5 +16,12 @@ public class Sender {
             MailDeliveryService m = new Pigeon();
             m.sendMail();
         }
-    };
+    }
+
+//    void send(){
+//        mailDeliveryService.sendMail();
+//    }
+
+
+
 }

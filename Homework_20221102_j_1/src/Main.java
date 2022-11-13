@@ -31,5 +31,8 @@ public class Main {
         int mail = scanner.nextInt();
         Sender m1 = new Sender();
         m1.send(mail);
+
+
+
     }
 }
