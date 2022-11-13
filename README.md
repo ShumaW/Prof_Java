@@ -71,5 +71,5 @@ Homework_09.11.2022
 - [President.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109_j/src/President.java)
 - [Superior.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109_j/src/Superior.java)
 - [Standard.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109_j/src/Standard.java)
-- [DateOfBooking.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109_j/src/DateOfBooking.java)
+- [MyDate.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109_j/src/MyDate.java)
 
