@@ -64,12 +64,12 @@ Task_2
 
 Homework_09.11.2022
 
-- [Main.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109/src/Main.java)
-- [Booking.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109/src/Booking.java)
-- [BookingRooms.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109/src/BookingRooms.java)
-- [Rooms.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109/src/Rooms.java)
-- [President.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109/src/President.java)
-- [Superior.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109/src/Superior.java)
-- [Standard.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109/src/Standard.java)
-- [DateOfBooking.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109/src/DateOfBooking.java)
+- [Main.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109_j/src/Main.java)
+- [Booking.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109_j/src/Booking.java)
+- [BookingRooms.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109_j/src/BookingRooms.java)
+- [Rooms.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109_j/src/Rooms.java)
+- [President.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109_j/src/President.java)
+- [Superior.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109_j/src/Superior.java)
+- [Standard.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109_j/src/Standard.java)
+- [DateOfBooking.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109_j/src/DateOfBooking.java)
 
