@@ -20,12 +20,6 @@ public class BookingRooms implements Booking{
         return true;
     }
 
-    @Override
-    public void newDateOfBooking(Rooms room, DateOfBooking date) {
-
-    }
-
-
     public void enlarge() {
         bookingRooms = Arrays.copyOf(bookingRooms, bookingRooms.length * 2);
     }
@@ -40,9 +34,4 @@ public class BookingRooms implements Booking{
                 .append("Total booked: " + size + " rooms")
                 .toString();
     }
-
-    public void newDateOfBooking(DeLuxe name, DateOfBooking date){}
-
-
-
 }

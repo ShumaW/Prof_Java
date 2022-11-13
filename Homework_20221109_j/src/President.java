@@ -1,11 +1,6 @@
 public class President extends Rooms {
-
-
-
-    public President(int price, DateOfBooking dateOfBooking) {
-        super(price,dateOfBooking);
+    public President(int price, MyDate myDate) {
+        super(price, myDate);
         super.name = "President";
     }
-
-
 }

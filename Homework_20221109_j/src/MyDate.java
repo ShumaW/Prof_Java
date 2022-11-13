@@ -1,4 +1,4 @@
-public class DateOfBooking {
+public class MyDate {
     private int dayOfArrival;
     private int monthOfArrival;
     private int yearOfArrival;
@@ -6,30 +6,6 @@ public class DateOfBooking {
     private int monthOfDeparture;
     private int yearOfDeparture;
     private int daysOfStay = 0;
-
-    public void setDayOfArrival(int dayOfArrival) {
-        this.dayOfArrival = dayOfArrival;
-    }
-
-    public void setMonthOfArrival(int monthOfArrival) {
-        this.monthOfArrival = monthOfArrival;
-    }
-
-    public void setYearOfArrival(int yearOfArrival) {
-        this.yearOfArrival = yearOfArrival;
-    }
-
-    public void setDayOfDeparture(int dayOfDeparture) {
-        this.dayOfDeparture = dayOfDeparture;
-    }
-
-    public void setMonthOfDeparture(int monthOfDeparture) {
-        this.monthOfDeparture = monthOfDeparture;
-    }
-
-    public void setYearOfDeparture(int yearOfDeparture) {
-        this.yearOfDeparture = yearOfDeparture;
-    }
 
     @Override
     public String toString() {
@@ -39,7 +15,7 @@ public class DateOfBooking {
                 "Total days - " + setDaysOfStay();
     }
 
-    public DateOfBooking(int dayOfArrival, int monthOfArrival, int yearOfArrival, int dayOfDeparture, int monthOfDeparture, int yearOfDeparture) {
+    public MyDate(int dayOfArrival, int monthOfArrival, int yearOfArrival, int dayOfDeparture, int monthOfDeparture, int yearOfDeparture) {
         this.dayOfArrival = dayOfArrival;
         this.monthOfArrival = monthOfArrival;
         this.yearOfArrival = yearOfArrival;
@@ -47,8 +23,6 @@ public class DateOfBooking {
         this.monthOfDeparture = monthOfDeparture;
         this.yearOfDeparture = yearOfDeparture;
     }
-
-
 
     public int setDaysOfStay() {
         if ((monthOfArrival == 1 || monthOfArrival == 3 || monthOfArrival == 5 || monthOfArrival == 7 || monthOfArrival == 8 || monthOfArrival == 10 || monthOfArrival == 12) && monthOfArrival != monthOfDeparture) {
@@ -60,9 +34,5 @@ public class DateOfBooking {
         } else {
             return this.daysOfStay = dayOfDeparture - dayOfArrival;
         }
-
     }
-
-
-
 }

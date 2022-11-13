@@ -1,11 +1,6 @@
 public class DeLuxe extends Rooms {
-
-    public DeLuxe(int price, DateOfBooking dateOfBooking) {
-        super(price,dateOfBooking);
+    public DeLuxe(int price, MyDate myDate) {
+        super(price, myDate);
         super.name = "De Luxe";
-
     }
-
-
-
 }
