@@ -1,3 +1,6 @@
 public interface Booking {
-    boolean add(Rooms room);
+    boolean add(HotelRooms room);
+    void availableRooms();
+    void changeTimeOfBooking(int numberOfBooking);
+
 }

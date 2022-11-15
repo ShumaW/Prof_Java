@@ -20,13 +20,22 @@ public class Main {
          */
 
         Booking b1 = new BookingRooms(1);
-        b1.add(new Standard(100,new MyDate(12,5,2022,18,5,2022)));
+        b1.add(new Standard(1,100,new MyDate(12,5,2022,18,5,2022)));
 
-        b1.add(new Superior(250,new MyDate(25,6,2022,12,7,2022)));
+        b1.add(new Superior(2,250,new MyDate(25,6,2022,12,7,2022)));
 
-        b1.add(new DeLuxe(1000,new MyDate(5,7,2022,15,7,2022)));
+        b1.add(new DeLuxe(3,1000,new MyDate(5,7,2022,15,7,2022)));
 
-        b1.add(new President(2500,new MyDate(1,8,2022,30,8,2022)));
+        b1.add(new President(4,2500,new MyDate(1,8,2022,30,8,2022)));
+
+        b1.add(new Standard(1,100,new MyDate(2,2,2022,10,2,2022)));
         System.out.println(b1);
+        b1.availableRooms();
+        b1.changeTimeOfBooking(5);
+        System.out.println(b1);
+
+
+
+
     }
 }

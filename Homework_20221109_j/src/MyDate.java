@@ -35,4 +35,33 @@ public class MyDate {
             return this.daysOfStay = dayOfDeparture - dayOfArrival;
         }
     }
+
+    public void setDayOfArrival(int dayOfArrival) {
+        this.dayOfArrival = dayOfArrival;
+    }
+
+    public void setMonthOfArrival(int monthOfArrival) {
+        this.monthOfArrival = monthOfArrival;
+    }
+
+    public void setYearOfArrival(int yearOfArrival) {
+        this.yearOfArrival = yearOfArrival;
+    }
+
+    public void setDayOfDeparture(int dayOfDeparture) {
+        this.dayOfDeparture = dayOfDeparture;
+    }
+
+    public void setMonthOfDeparture(int monthOfDeparture) {
+        this.monthOfDeparture = monthOfDeparture;
+    }
+
+    public void setYearOfDeparture(int yearOfDeparture) {
+        this.yearOfDeparture = yearOfDeparture;
+    }
+//    public String getDate (int day, int month,int year){
+//        return day + "." + month + "." + year;
+//    }
+
+
 }
