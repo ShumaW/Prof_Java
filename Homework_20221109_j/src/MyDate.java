@@ -59,9 +59,4 @@ public class MyDate {
     public void setYearOfDeparture(int yearOfDeparture) {
         this.yearOfDeparture = yearOfDeparture;
     }
-//    public String getDate (int day, int month,int year){
-//        return day + "." + month + "." + year;
-//    }
-
-
 }

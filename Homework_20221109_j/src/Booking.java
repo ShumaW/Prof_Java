@@ -3,4 +3,7 @@ public interface Booking {
     void availableRooms();
     void changeTimeOfBooking(int numberOfBooking);
 
+    void deleteBooking(int index);
+
+
 }

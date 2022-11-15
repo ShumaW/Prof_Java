@@ -45,7 +45,7 @@ public class BookingRooms implements Booking {
 
         }
         return res.append(System.lineSeparator())
-                .append("Total booked: " + size + " rooms")
+                .append("Total booked: " + this.size + " rooms")
                 .toString();
     }
 
@@ -94,5 +94,14 @@ public class BookingRooms implements Booking {
         }
     }
 
-
+    public void deleteBooking(int index){
+        HotelRooms[] temp = bookingRooms;
+        for (int i = 0; i < size; i++) {
+            if (index == i) {
+                bookingRooms[i] = null;
+                bookingRooms = Arrays.copyOf(temp,(size - 1));
+                this.size = bookingRooms.length;
+            }
+        }
+    }
 }
