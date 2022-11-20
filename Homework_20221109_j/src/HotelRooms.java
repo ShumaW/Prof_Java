@@ -38,7 +38,7 @@ public class HotelRooms {
         }
     }
 
-
-
-
+    public MyDate getMyDate() {
+        return myDate;
+    }
 }

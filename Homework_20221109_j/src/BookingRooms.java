@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class BookingRooms implements Booking {
+public class BookingRooms implements Booking{
     private int capasity;
     private int size;
     private HotelRooms[] bookingRooms;
@@ -94,14 +94,19 @@ public class BookingRooms implements Booking {
         }
     }
 
-    public void deleteBooking(int index){
+    public void deleteBooking(int index) {
         HotelRooms[] temp = bookingRooms;
         for (int i = 0; i < size; i++) {
             if (index == i) {
                 bookingRooms[i] = null;
-                bookingRooms = Arrays.copyOf(temp,(size - 1));
+                if (bookingRooms[i] == null) {
+                    bookingRooms[i] = bookingRooms[size - 1];
+                }
+                bookingRooms = Arrays.copyOf(temp, (size - 1));
+
                 this.size = bookingRooms.length;
             }
         }
     }
+
 }

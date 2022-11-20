@@ -1,4 +1,4 @@
-public class MyDate {
+public class MyDate implements Comparable<MyDate>{
     private int dayOfArrival;
     private int monthOfArrival;
     private int yearOfArrival;
@@ -58,5 +58,41 @@ public class MyDate {
 
     public void setYearOfDeparture(int yearOfDeparture) {
         this.yearOfDeparture = yearOfDeparture;
+    }
+
+    public int getDayOfArrival() {
+        return dayOfArrival;
+    }
+
+    public int getMonthOfArrival() {
+        return monthOfArrival;
+    }
+
+    public int getYearOfArrival() {
+        return yearOfArrival;
+    }
+
+    public int getDayOfDeparture() {
+        return dayOfDeparture;
+    }
+
+    public int getMonthOfDeparture() {
+        return monthOfDeparture;
+    }
+
+    public int getYearOfDeparture() {
+        return yearOfDeparture;
+    }
+
+    @Override
+    public int compareTo(MyDate o) {
+        if (this.dayOfArrival != o.dayOfArrival){
+            return this.dayOfArrival - o.dayOfArrival;
+        } else if (this.monthOfArrival != o.monthOfArrival) {
+            return this.monthOfArrival - o.monthOfArrival;
+        } else if (this.yearOfArrival != o.yearOfArrival) {
+            return this.yearOfArrival - o.yearOfArrival;
+        }
+        return 0;
     }
 }

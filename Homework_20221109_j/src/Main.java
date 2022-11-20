@@ -4,14 +4,11 @@ public class Main {
         /*
         Необходимо написать программу для сохранения данных о бронирование
         номеров гостиницы.
-
         В вашей программе должно быть несколько типов номеров,
         например: standard, superior, de luxe, president.
         Естественно, номера отличаются ценой проживания.
-
         Кроме того, номера категории de luxe, president предполагают доступ в fitness center, для остальных категорий номеров доступ
         в fitness center оплачивается как отдельная услуга.
-
         Ваша программа должна
         позволять сотрудникам отеля сохранить и просмотреть данные о бронирование,
         отменить бронирование, посмотреть все бронирования.
@@ -43,12 +40,13 @@ public class Main {
 //        System.out.println(b1);
 //        b1.availableRooms();
 
-        b1.deleteBooking(4);
-        System.out.println(b1);
-        b1.availableRooms();
-
+//        b1.deleteBooking(3);
+//        System.out.println(b1);
+//        b1.availableRooms();
+//
         b1.add(new President(4,2500,new MyDate(25,11,2022,10,12,2022)));
         System.out.println(b1);
         b1.availableRooms();
+
     }
 }
