@@ -74,3 +74,12 @@ Homework_09.11.2022
 - [Standard.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109_j/src/Standard.java)
 - [MyDate.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221109_j/src/MyDate.java)
 
+Homework_16.11.2022
+
+- [Main.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221116_j/src/Main.java)
+- [Film.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221116_j/src/Film.java)
+- [CompareFilmByTitle.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221116_j/src/CompareFilmByTitle.java)
+- [CompareFilmByRating.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221116_j/src/CompareFilmByRating.java)
+- [CompareFilmByGenre.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221116_j/src/CompareFilmByGenre.java)
+- [CompereFilmByYearsOfRelease.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221116_j/src/CompereFilmByYearsOfRelease.java)
+
