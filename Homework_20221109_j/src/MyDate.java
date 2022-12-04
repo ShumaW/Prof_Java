@@ -1,98 +1,59 @@
-public class MyDate implements Comparable<MyDate>{
-    private int dayOfArrival;
-    private int monthOfArrival;
-    private int yearOfArrival;
-    private int dayOfDeparture;
-    private int monthOfDeparture;
-    private int yearOfDeparture;
-    private int daysOfStay = 0;
+public class MyDate implements Comparable<MyDate> {
+    private int day;
+    private int month;
+    private int year;
+
 
     @Override
     public String toString() {
-        return "DateOfBooking: " + System.lineSeparator() +
-                "1. DayOfArrival " + dayOfArrival + "." + monthOfArrival + "." + yearOfArrival + System.lineSeparator() +
-                "2. DayOfDeparture " + dayOfDeparture + "." + monthOfDeparture + "." + yearOfDeparture + System.lineSeparator() + "------------------------" + System.lineSeparator() +
-                "Total days - " + setDaysOfStay();
+        return day + "." + month + "." + year;
     }
 
-    public MyDate(int dayOfArrival, int monthOfArrival, int yearOfArrival, int dayOfDeparture, int monthOfDeparture, int yearOfDeparture) {
-        this.dayOfArrival = dayOfArrival;
-        this.monthOfArrival = monthOfArrival;
-        this.yearOfArrival = yearOfArrival;
-        this.dayOfDeparture = dayOfDeparture;
-        this.monthOfDeparture = monthOfDeparture;
-        this.yearOfDeparture = yearOfDeparture;
+    public MyDate(int day, int month, int year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
     }
 
-    public int setDaysOfStay() {
-        if ((monthOfArrival == 1 || monthOfArrival == 3 || monthOfArrival == 5 || monthOfArrival == 7 || monthOfArrival == 8 || monthOfArrival == 10 || monthOfArrival == 12) && monthOfArrival != monthOfDeparture) {
-            return this.daysOfStay = (31 - dayOfArrival) + dayOfDeparture ;
-        } else if (monthOfArrival == 2 && monthOfArrival != monthOfDeparture) {
-            return this.daysOfStay = (28 - dayOfArrival) + dayOfDeparture;
-        } else if ((monthOfArrival == 2 || monthOfArrival == 4 || monthOfArrival == 6 || monthOfArrival == 9 || monthOfArrival == 11) && monthOfArrival != monthOfDeparture ){
-            return this.daysOfStay = (30 - dayOfArrival) + dayOfDeparture;
-        } else {
-            return this.daysOfStay = dayOfDeparture - dayOfArrival;
-        }
+
+    public void setDay(int dayOfArrival) {
+        this.day = dayOfArrival;
     }
 
-    public void setDayOfArrival(int dayOfArrival) {
-        this.dayOfArrival = dayOfArrival;
+    public void setMonth(int month) {
+        this.month = month;
     }
 
-    public void setMonthOfArrival(int monthOfArrival) {
-        this.monthOfArrival = monthOfArrival;
+    public void setYear(int year) {
+        this.year = year;
     }
 
-    public void setYearOfArrival(int yearOfArrival) {
-        this.yearOfArrival = yearOfArrival;
+
+    public int getMonth() {
+        return month;
     }
 
-    public void setDayOfDeparture(int dayOfDeparture) {
-        this.dayOfDeparture = dayOfDeparture;
+    public int getYear() {
+        return year;
     }
 
-    public void setMonthOfDeparture(int monthOfDeparture) {
-        this.monthOfDeparture = monthOfDeparture;
-    }
-
-    public void setYearOfDeparture(int yearOfDeparture) {
-        this.yearOfDeparture = yearOfDeparture;
-    }
-
-    public int getDayOfArrival() {
-        return dayOfArrival;
-    }
-
-    public int getMonthOfArrival() {
-        return monthOfArrival;
-    }
-
-    public int getYearOfArrival() {
-        return yearOfArrival;
-    }
-
-    public int getDayOfDeparture() {
-        return dayOfDeparture;
-    }
-
-    public int getMonthOfDeparture() {
-        return monthOfDeparture;
-    }
-
-    public int getYearOfDeparture() {
-        return yearOfDeparture;
+    public int getDay() {
+        return day;
     }
 
     @Override
     public int compareTo(MyDate o) {
-        if (this.dayOfArrival != o.dayOfArrival){
-            return this.dayOfArrival - o.dayOfArrival;
-        } else if (this.monthOfArrival != o.monthOfArrival) {
-            return this.monthOfArrival - o.monthOfArrival;
-        } else if (this.yearOfArrival != o.yearOfArrival) {
-            return this.yearOfArrival - o.yearOfArrival;
+        if (this.year != o.year) {
+            return this.year - o.year;
+        }
+        if (this.month != o.month) {
+            return this.month - o.month;
+        }
+        if (this.day != o.day) {
+            return this.day - o.day;
         }
         return 0;
     }
+
+
 }

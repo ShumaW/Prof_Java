@@ -83,3 +83,7 @@ Homework_16.11.2022
 - [CompareFilmByGenre.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221116_j/src/CompareFilmByGenre.java)
 - [CompereFilmByYearsOfRelease.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221116_j/src/CompereFilmByYearsOfRelease.java)
 
+Homework_30.11.2022
+
+- [Main.java](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221130_j/src/Main.java)
+

@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -22,31 +24,51 @@ public class Main {
          */
 
 
-        Booking b1 = new BookingRooms(1);
-        b1.add(new Standard(1,100,new MyDate(12,5,2022,18,5,2022)));
-
-        b1.add(new Superior(2,250,new MyDate(25,6,2022,12,7,2022)));
-
-        b1.add(new DeLuxe(3,1000,new MyDate(5,7,2022,15,7,2022)));
-
-        b1.add(new President(4,2500,new MyDate(1,8,2022,30,8,2022)));
-
-        b1.add(new Standard(1,100,new MyDate(20,2,2022,10,3,2022)));
+//        Booking b1 = new BookingRooms(1);
+//        b1.add(new Standard(1,100,new MyDate(12,5,2022),new MyDate(18,5,2022)));
+//
+//        b1.add(new Superior(2,250,new MyDate(25,6,2022),new MyDate(12,7,2022)));
+//
+//        b1.add(new DeLuxe(3,1000,new MyDate(5,7,2022),new MyDate(15,7,2022)));
+//
+//        b1.add(new President(4,2500,new MyDate(1,8,2022),new MyDate(30,8,2022)));
+//
+//        b1.add(new Standard(1,100,new MyDate(20,2,2022),new MyDate(10,3,2022)));
+//        b1.add(new President(4,2500,new MyDate(25,11,2022),new MyDate(10,12,2022)));
 //        System.out.println(b1);
 //        b1.availableRooms();
 //        b1.changeTimeOfBooking(5);
 //        System.out.println(b1);
-
+//        b1.deleteBooking(1);
 //        System.out.println(b1);
-//        b1.availableRooms();
 
-//        b1.deleteBooking(3);
-//        System.out.println(b1);
-//        b1.availableRooms();
-//
-        b1.add(new President(4,2500,new MyDate(25,11,2022,10,12,2022)));
-        System.out.println(b1);
-        b1.availableRooms();
+        List<HotelRooms> bookingRooms = new ArrayList<HotelRooms>();
+        bookingRooms.add(new Standard(1,100,new MyDate(12,5,2022),new MyDate(18,5,2022)));
+
+        bookingRooms.add(new Superior(2,250,new MyDate(25,6,2022),new MyDate(12,7,2022)));
+
+        bookingRooms.add(new DeLuxe(3,1000,new MyDate(5,7,2022),new MyDate(15,7,2022)));
+
+        bookingRooms.add(new President(4,2500,new MyDate(1,8,2022),new MyDate(30,8,2022)));
+
+        bookingRooms.add(new Standard(1,100,new MyDate(20,2,2022),new MyDate(10,3,2022)));
+        bookingRooms.add(new President(4,2500,new MyDate(25,11,2022),new MyDate(10,12,2022)));
+
+        System.out.println(bookingRooms);
+        Collections.sort(bookingRooms);
+        System.out.println(bookingRooms);
+//        bookingRooms.remove(2);
+//        System.out.println(bookingRooms);
+//        bookingRooms.get(0).changeTimeOfBooking(bookingRooms,3);
+//        Collections.sort(bookingRooms);
+//        System.out.println(bookingRooms);
+//        bookingRooms.get(0).availableRooms(bookingRooms);
+
+
 
     }
+
+
+
+
 }

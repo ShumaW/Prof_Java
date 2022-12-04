@@ -27,7 +27,7 @@ public class Main {
                 System.out.println(films);
                 break;
             case "rating":
-                Collections.sort(films, new CompareFilmByRating());
+                Collections.sort(films, new CompareFilmByRatingDownToUp());
                 System.out.println(films);
                 break;
             case "genre":

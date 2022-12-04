@@ -1,7 +1,6 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
-public class BookingRooms implements Booking{
+public class BookingRooms implements Booking {
     private int capasity;
     private int size;
     private HotelRooms[] bookingRooms;
@@ -38,7 +37,7 @@ public class BookingRooms implements Booking{
         StringBuilder res = new StringBuilder();
         for (int i = 0; i < bookingRooms.length && i < size; i++) {
             res.append(System.lineSeparator())
-                    .append("Number of booking is " + (i + 1))
+                    .append("Number of booking is " + (i + 1) + " ")
                     .append(bookingRooms[i])
                     .append(System.lineSeparator())
                     .append("-----------------------------");
@@ -78,17 +77,17 @@ public class BookingRooms implements Booking{
             if ((numberOfBooking - 1) == i) {
                 Scanner scanner = new Scanner(System.in);
                 System.out.println("Please enter a new day of arrival:");
-                bookingRooms[i].myDate.setDayOfArrival(scanner.nextInt());
+                bookingRooms[i].dateOfArrival.setDay(scanner.nextInt());
                 System.out.println("Please enter a new month of arrival:");
-                bookingRooms[i].myDate.setMonthOfArrival(scanner.nextInt());
+                bookingRooms[i].dateOfArrival.setMonth(scanner.nextInt());
                 System.out.println("Please enter a new year of arrival:");
-                bookingRooms[i].myDate.setYearOfArrival(scanner.nextInt());
+                bookingRooms[i].dateOfArrival.setYear(scanner.nextInt());
                 System.out.println("Please enter a new day of departure:");
-                bookingRooms[i].myDate.setDayOfDeparture(scanner.nextInt());
+                bookingRooms[i].dateOfDeparture.setDay(scanner.nextInt());
                 System.out.println("Please enter a new month of departure:");
-                bookingRooms[i].myDate.setMonthOfDeparture(scanner.nextInt());
+                bookingRooms[i].dateOfDeparture.setMonth(scanner.nextInt());
                 System.out.println("Please enter a new year of departure:");
-                bookingRooms[i].myDate.setYearOfDeparture(scanner.nextInt());
+                bookingRooms[i].dateOfDeparture.setYear(scanner.nextInt());
                 scanner.close();
             }
         }
@@ -109,4 +108,7 @@ public class BookingRooms implements Booking{
         }
     }
 
+    public void sortByDateOfArrival() {
+        List.of(bookingRooms).sort(HotelRooms::compareTo);
+    }
 }
