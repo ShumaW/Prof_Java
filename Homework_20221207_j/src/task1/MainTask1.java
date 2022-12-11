@@ -24,25 +24,26 @@ public class MainTask1 {
         for (String w : words) {
             list.add(w);
         }
+        Collections.sort(list);
+        System.out.println(list);
 
-        Map<String, Integer> newMap = new HashMap<>();
+        Map<String, Integer> newMap = new LinkedHashMap<>();
         int counter = 1;
         for (int i = 0; i < list.size(); i++) {
             newMap.put(list.get(i), counter);
         }
-        for (int i = 0; i < list.size() - 1; i++) {
+        System.out.println(newMap);
 
-            for (int j = i + 1; j < list.size(); j++) {
-
-                if (list.get(i).equals(list.get(j))) {
-                    newMap.replace(list.get(i),counter,++counter );
+        for (int i = 0; i < list.size(); i++) {
+            for (int j = 0; j < list.size(); j++) {
+                if (list.get(i) == list.get(j)) {
+                    newMap.replace(list.get(i), counter, counter+=1);
+                    list.remove(j);
                 }
             }
         }
-        System.out.println(newMap);
+        newMap.forEach((k, v) -> System.out.print(k + ": " + v + " "));
     }
-
-
 }
 
 
