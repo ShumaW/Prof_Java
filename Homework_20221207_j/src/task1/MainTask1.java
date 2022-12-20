@@ -13,8 +13,6 @@ public class MainTask1 {
     public static void main(String[] args) {
         String sentence = "as soon as possible";
         getWordsWithCount(sentence);
-
-
     }
 
     public static void getWordsWithCount(String sentence) {

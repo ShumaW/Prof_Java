@@ -90,5 +90,11 @@ Homework_30.11.2022
 Homework_07.12.2022
 
 - [Task1](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221207_j/src/task1/MainTask1.java)
-- [Task2](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221207_j/src/task2/MainTask2.java) 
+- [Task2](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221207_j/src/task2/MainTask2.java)
+
+Homework_19.12.2022
+
+- [Main](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221219_j/src/Main.java)
+- [OurList](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221219_j/src/OurList.java)
+- [OurLinkedList](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221219_j/src/OurLinkedList.java)
 
