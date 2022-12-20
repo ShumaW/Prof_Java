@@ -135,10 +135,10 @@ public class OurLinkedList<E> implements OurList<E>, Iterable<E>{
         }
 
         public void remove(){
-            if (pos == 0) {
+            if ( pos == -1 ) {
                 throw new IllegalStateException("No current element!");
             }
-            list.remove(--pos);
+            list.removeByiD(--pos);
         }
     }
 
