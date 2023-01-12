@@ -18,7 +18,7 @@ public class Main {
         System.out.println("-".repeat(25) + " remove each odd element in the list " + "-".repeat(25));
         Iterator<Integer> it = list.iterator();
         while (it.hasNext()){
-            if (it.next()%2 == 0 ){
+            if (it.next()%2 != 0 ){
                 it.remove();
             }
         }

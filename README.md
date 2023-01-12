@@ -98,3 +98,7 @@ Homework_19.12.2022
 - [OurList](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221219_j/src/OurList.java)
 - [OurLinkedList](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20221219_j/src/OurLinkedList.java)
 
+Homework_11.01.2023
+
+- [Main](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20230111_j/src/Main.java)
+

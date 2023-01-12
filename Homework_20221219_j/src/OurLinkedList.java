@@ -135,7 +135,7 @@ public class OurLinkedList<E> implements OurList<E>, Iterable<E>{
         }
 
         public void remove(){
-            if ( pos == -1 ) {
+            if ( !(pos > 0 && pos <= size) ) {
                 throw new IllegalStateException("No current element!");
             }
             list.removeByiD(--pos);
