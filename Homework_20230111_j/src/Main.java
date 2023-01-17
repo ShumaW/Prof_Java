@@ -39,9 +39,12 @@ public class Main {
         }
 
         Map<String, Integer> map = new LinkedHashMap<>();
-        for (String s : list) {
-            map.merge(s, 1, Integer::sum);
-        }
+
+//        for (String s : list) {
+//            map.merge(s, 1, Integer::sum);
+//        }
+
+        list.forEach((s) -> map.merge(s, 1, Integer::sum));
 
         List<Map.Entry<String, Integer>> list1 = new ArrayList<>(map.entrySet());
 
