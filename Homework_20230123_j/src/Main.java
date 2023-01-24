@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -71,6 +72,8 @@ public class Main {
 
         System.out.println("-".repeat(25) + " Получите сотрудников из всех отделов с максимальной зп " + "-".repeat(25));
 
+        System.out.println("-".repeat(25) + " Вариант 1 " + "-".repeat(25));
+
         System.out.println(personal.stream()
                         .filter(employee -> employee.getDepartment().equals("Marketing"))
                 .sorted(((o1, o2) -> (int) (o2.getSalary() - o1.getSalary())))
@@ -85,5 +88,10 @@ public class Main {
                 .filter(employee -> employee.getDepartment().equals("Garage"))
                 .sorted(((o1, o2) -> (int) (o2.getSalary() - o1.getSalary())))
                 .findFirst());
+
+        System.out.println("-".repeat(25) + " Вариант 2 " + "-".repeat(25));
+
+        System.out.println(personal.stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment, Collectors.maxBy(Comparator.comparing(Employee::getSalary)))));
     }
 }
