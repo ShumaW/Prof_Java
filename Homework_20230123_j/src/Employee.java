@@ -1,4 +1,8 @@
+import java.util.UUID;
+
 public class Employee {
+
+    private String id;
 
     private String name;
     private String position;
@@ -6,11 +10,12 @@ public class Employee {
     private String department;
     private double salary;
 
-    public Employee(String name, String position, String department, int salary) {
+    public Employee(String name, String position, String department, double salary) {
         this.name = name;
         this.position = position;
         this.department = department;
         this.salary = salary;
+        this.id = UUID.randomUUID().toString();
     }
 
     public String getName() {
@@ -47,6 +52,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee: " + name + ", position: " + position + ", department: " + department + ", salary: " + salary + "\n";
+        return "Employee: " + id.substring(8) + "  " + name + ", position: " + position + ", department: " + department + ", salary: " + salary + "\n";
     }
 }

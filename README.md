@@ -107,3 +107,9 @@ Homework_23.01.2023
 - [Main](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20230123_j/src/Main.java)
 - [Employee](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20230123_j/src/Employee.java)
 
+HW_25.01.2023
+
+- [Main](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20230125_j/src/Main.java)
+- [Person](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20230125_j/src/Person.java)
+- [data.txt](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20230125_j/data.txt)
+
