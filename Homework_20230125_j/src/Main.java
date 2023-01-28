@@ -1,15 +1,9 @@
 import java.io.*;
-import java.nio.CharBuffer;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.function.BinaryOperator;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-import static java.util.stream.Collectors.maxBy;
-import static java.util.stream.Collectors.toMap;
 
 public class Main {
     public static void main(String[] args) {
