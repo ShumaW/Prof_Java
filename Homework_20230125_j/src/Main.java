@@ -1,8 +1,7 @@
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
+import java.io.*;
 import java.nio.CharBuffer;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
@@ -97,20 +96,36 @@ public class Main {
                 .filter(x -> x.getKey() >= 3)
                 .forEach(System.out::println);
 
-//        System.out.println("-".repeat(25) + " 7.Напишите код, который считывает текстовый файл и используя Stream API, " + "-".repeat(25) + "\n" + " ".repeat(26) +
-//                "подсчитывает количество слов в файле. ");
-//        try {
-//            InputStream stream = new FileInputStream("data.txt");
-//            Reader reader = new InputStreamReader(stream);
-//            int data = reader.read();
-//            while (data != -1) {
-//                System.out.print((char) data);
-//                data = reader.read();
-//            }
-//
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        System.out.println("-".repeat(25) + " 7.Напишите код, который считывает текстовый файл и используя Stream API, " + "-".repeat(25) + "\n" + " ".repeat(26) +
+                "подсчитывает количество слов в файле. ");
+
+        try {
+            InputStream stream = new FileInputStream("data.txt");
+            Reader reader1 = new InputStreamReader(stream);
+
+            int data = reader1.read();
+
+            while (data != -1) {
+                System.out.print((char) data);
+                data = reader1.read();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println();
+
+        Stream<String> lines =
+                null;
+        try {
+            lines = Files.lines(Paths.get("data.txt"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        long wordsCount = lines
+                .flatMap(s -> Stream.of(s.split("[\s\n\t\r]+")).filter(t -> !t.isEmpty()))
+                .count();
+
+        System.out.println("Number of words: " + wordsCount);
     }
 }
