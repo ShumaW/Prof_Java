@@ -116,5 +116,5 @@ HW_25.01.2023
 HW_01.02.2023
 
 - [Main](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230201_j/src/Main.java)
-- [myFirstOutputFile](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230201_j/myFirstOutputFile.txt)
+- [myFirstOutputFile](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230201_j/src/myFirstOutputFile.txt)
 

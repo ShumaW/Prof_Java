@@ -11,7 +11,7 @@ public class Main {
 
 
         // create & input text in file
-        try (FileOutputStream fos = new FileOutputStream("myFirstOutputFile.txt")){
+        try (FileOutputStream fos = new FileOutputStream("./src/myFirstOutputFile.txt")){
 
             fos.write(("This is my first experience when I myself work with IO API. I can do everything!")
                     .getBytes());
@@ -24,7 +24,7 @@ public class Main {
         }
 
         // read file & output
-        try (InputStream fis = new FileInputStream("myFirstOutputFile.txt")) {
+        try (InputStream fis = new FileInputStream("./src/myFirstOutputFile.txt")) {
             Reader reader1 = new InputStreamReader(fis);
 
             int data = reader1.read();
