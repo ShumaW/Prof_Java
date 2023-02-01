@@ -113,3 +113,8 @@ HW_25.01.2023
 - [Person](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20230125_j/src/Person.java)
 - [data.txt](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20230125_j/data.txt)
 
+HW_01.02.2023
+
+-[Main](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20230201_j/src/Main.java)
+-[myFirstOutputFile](https://github.com/ShumaW/Prof_Java/blob/master/Homework_20230201_j/src/myFirstOutputFile.java)
+

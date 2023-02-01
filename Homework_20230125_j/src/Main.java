@@ -119,6 +119,7 @@ public class Main {
         long wordsCount = lines
                 .flatMap(s -> Stream.of(s.split("[\s\n\t\r]+")).filter(t -> !t.isEmpty()))
                 .count();
+        lines.close();
 
         System.out.println("Number of words: " + wordsCount);
     }
