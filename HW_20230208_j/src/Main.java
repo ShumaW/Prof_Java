@@ -81,7 +81,7 @@ public class Main {
                     contact.setWebSite(site);
                 }
             }
-            listOfContacts.stream().forEach(System.out::println);
+            listOfContacts.stream().sorted((o1, o2) -> o1.getTelNumber().compareTo(o2.getTelNumber())).forEach(System.out::println);
 
 
         } catch (IOException e) {
