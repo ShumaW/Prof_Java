@@ -124,4 +124,5 @@ HW_08.02.2023
 - [Contact](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230208_j/src/Contact.java)
 - [Address](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230208_j/src/Address.java)
 - [input_business_card.txt](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230208_j/input_business_card.txt)
+- [result.ser](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230208_j/result.ser)
 
