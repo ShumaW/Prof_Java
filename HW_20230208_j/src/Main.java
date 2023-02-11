@@ -1,5 +1,4 @@
-import java.io.BufferedReader;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -83,8 +82,21 @@ public class Main {
             }
             listOfContacts.stream().sorted((o1, o2) -> o1.getTelNumber().compareTo(o2.getTelNumber())).forEach(System.out::println);
 
+            System.out.println("-".repeat(50));
+
+            FileOutputStream fileOutputStream = new FileOutputStream("result.ser");
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+            objectOutputStream.writeObject(listOfContacts);
+            objectOutputStream.close();
+
+            FileInputStream fileInputStream = new FileInputStream("result.ser");
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            System.out.println(objectInputStream.readObject());
+
 
         } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }

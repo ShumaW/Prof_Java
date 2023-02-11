@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.stream.Stream;
 
-public class Contact {
+public class Contact implements Serializable {
     private String  nameAndLastName;
     private String  telNumber;
     private String streetAndNum;
