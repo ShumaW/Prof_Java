@@ -37,24 +37,16 @@ public class Main {
                 BufferedReader bufferedReader = Files.newBufferedReader(Paths.get("input_business_card.txt"));
         ) {
             String lines;
-            String names;
-            String telephones;
-            String streets;
-            String city;
-            String country;
-            String email;
-            String site;
-
 
             while ((lines = bufferedReader.readLine()) != null) {
                 if (lines.matches("")) {
-                    names = String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches("(FN:)(.+)$")).toArray())).substring(3);
-                    telephones = String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches(".+\\:\\+.+")).toArray())).substring(21);
-                    streets = String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches(".+\\:.+(STREET)\\:.+")).toArray())).substring(26);
-                    city = String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches(".+\\:.+(CITY)\\:.+")).toArray())).substring(24);
-                    country = String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches(".+\\:.+(COUNTRY)\\:.+")).toArray())).substring(27);
-                    email = String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches(".*\\w\\@.+")).toArray())).substring(25);
-                    site = String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches(".*(www.).*")).toArray())).substring(23);
+                    String names= String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches("(FN:)(.+)$")).toArray())).substring(3);
+                    String telephones = String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches(".+\\:\\+.+")).toArray())).substring(21);
+                    String streets = String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches(".+\\:.+(STREET)\\:.+")).toArray())).substring(26);
+                    String city = String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches(".+\\:.+(CITY)\\:.+")).toArray())).substring(24);
+                    String country = String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches(".+\\:.+(COUNTRY)\\:.+")).toArray())).substring(27);
+                    String email = String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches(".*\\w\\@.+")).toArray())).substring(25);
+                    String site = String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches(".*(www.).*")).toArray())).substring(23);
 
                     listOfContacts.add(new Contact(names, telephones, new Address(streets, city, country), email, site));
                 }

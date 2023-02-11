@@ -15,6 +15,37 @@ public class Contact {
         this.webSite = webSite;
     }
 
+    public String getNameAndLastName() {
+        return nameAndLastName;
+    }
+
+    public void setNameAndLastName(String nameAndLastName) {
+        this.nameAndLastName = nameAndLastName;
+    }
+
+    public String getTelNumber() {
+        return telNumber;
+    }
+
+    public void setTelNumber(String telNumber) {
+        this.telNumber = telNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getWebSite() {
+        return webSite;
+    }
+
+    public void setWebSite(String webSite) {
+        this.webSite = webSite;
+    }
 
     @Override
     public String toString() {
