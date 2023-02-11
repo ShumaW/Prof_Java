@@ -3,14 +3,18 @@ import java.util.stream.Stream;
 public class Contact {
     private String  nameAndLastName;
     private String  telNumber;
-    private Address  address;
+    private String streetAndNum;
+    private String city;
+    private String country;
     private String  email;
     private String  webSite;
 
-    public Contact(String nameAndLastName, String telNumber, Address address, String email, String webSite) {
+    public Contact(String nameAndLastName, String telNumber, String streetAndNum, String city, String country, String email, String webSite) {
         this.nameAndLastName = nameAndLastName;
         this.telNumber = telNumber;
-        this.address = address;
+        this.streetAndNum = streetAndNum;
+        this.city = city;
+        this.country = country;
         this.email = email;
         this.webSite = webSite;
     }
@@ -31,6 +35,30 @@ public class Contact {
         this.telNumber = telNumber;
     }
 
+    public String getStreetAndNum() {
+        return streetAndNum;
+    }
+
+    public void setStreetAndNum(String streetAndNum) {
+        this.streetAndNum = streetAndNum;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -49,6 +77,6 @@ public class Contact {
 
     @Override
     public String toString() {
-        return nameAndLastName +  ", telNumber: +" + telNumber + ", " + address + ", email: " + email + ", webSite: " + webSite + "\n";
+        return nameAndLastName +  ", telNumber: +" + telNumber + ", address: " + streetAndNum + ", " + city + ", " + ", " + country + ", email: " + email + ", webSite: " + webSite + "\n";
     }
 }

@@ -36,26 +36,57 @@ public class Main {
         try (
                 BufferedReader bufferedReader = Files.newBufferedReader(Paths.get("input_business_card.txt"));
         ) {
-            String lines;
+            String line;
+            Contact contact = null;
+            String name = "";
+            String telephone = "";
+            String street = "";
+            String city = "";
+            String country = "";
+            String email = "";
+            String site = "";
 
-            while ((lines = bufferedReader.readLine()) != null) {
-                if (lines.matches("")) {
-                    String names= String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches("(FN:)(.+)$")).toArray())).substring(3);
-                    String telephones = String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches(".+\\:\\+.+")).toArray())).substring(21);
-                    String streets = String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches(".+\\:.+(STREET)\\:.+")).toArray())).substring(26);
-                    String city = String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches(".+\\:.+(CITY)\\:.+")).toArray())).substring(24);
-                    String country = String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches(".+\\:.+(COUNTRY)\\:.+")).toArray())).substring(27);
-                    String email = String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches(".*\\w\\@.+")).toArray())).substring(25);
-                    String site = String.valueOf(Arrays.stream(lines.lines().filter(s -> s.matches(".*(www.).*")).toArray())).substring(23);
+            while ((line = bufferedReader.readLine()) != null) {
+                if (line.matches("BEGIN:VCARD")) {
 
-                    listOfContacts.add(new Contact(names, telephones, new Address(streets, city, country), email, site));
+                    contact = new Contact(name, telephone, street ,city, country, email, site);
+                    listOfContacts.add(contact);
+                }
+                if (line.matches("(FN:)(.+)$")) {
+                    name = line.substring(3);
+                    contact.setNameAndLastName(name);
+                }
+                if (line.matches(".+\\:\\+.+")) {
+                    telephone = line.substring(21);
+                    contact.setTelNumber(telephone);
+                }
+                if (line.matches(".+\\:.+(STREET)\\:.+")) {
+                    street = line.substring(26);
+                    contact.setStreetAndNum(street);
+                }
+                if (line.matches(".+\\:.+(CITY)\\:.+")) {
+                    city = line.substring(24);
+                    contact.setCity(city);
+                }
+                if (line.matches(".+\\:.+(COUNTRY)\\:.+")) {
+                    country = line.substring(27);
+                    contact.setCountry(country);
+                }
+                if (line.matches(".*\\w\\@.+")) {
+                    email = line.substring(25);
+                    contact.setEmail(email);
+                }
+                if (line.matches(".*(www.).*")) {
+                    site = line.substring(23);
+                    contact.setWebSite(site);
                 }
             }
-        } catch (IOException ex) {
-            throw new RuntimeException(ex);
-        }
-        listOfContacts.stream().forEach(System.out::println);
+            listOfContacts.stream().forEach(System.out::println);
 
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
 
