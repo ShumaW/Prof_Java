@@ -4,6 +4,8 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static java.lang.String.CASE_INSENSITIVE_ORDER;
 
@@ -45,56 +47,93 @@ public class Main {
             String email = "";
             String site = "";
 
+
             while ((line = bufferedReader.readLine()) != null) {
-                if (line.matches("BEGIN:VCARD")) {
+
+                if (line.matches("(FN:)(.+)$")) {
+                    Pattern pname = Pattern.compile("(FN:)");
+                    Matcher mname = pname.matcher(line);
+                    mname.find();
+                    name = line.substring(mname.end());
+
+                }
+                if (line.matches(".+\\:\\+.+")) {
+                    Pattern ptel = Pattern.compile("(.+\\:\\+)");
+                    Matcher mtel = ptel.matcher(line);
+                    mtel.find();
+                    telephone = line.substring(mtel.end());
+
+                }
+                if (line.matches(".+\\:.+(STREET:).+")) {
+                    Pattern pst = Pattern.compile("(STREET:)");
+                    Matcher mst = pst.matcher(line);
+                    mst.find();
+                    street = line.substring(mst.end());
+
+                }
+                if (line.matches(".+\\:.+(CITY)\\:.+")) {
+                    Pattern pcity = Pattern.compile("((CITY)\\:)");
+                    Matcher mcity = pcity.matcher(line);
+                    mcity.find();
+                    city = line.substring(mcity.end());
+
+                }
+                if (line.matches(".+\\:.+(COUNTRY)\\:.+")) {
+                    Pattern pcountry = Pattern.compile("(COUNTRY:)");
+                    Matcher mcountry = pcountry.matcher(line);
+                    mcountry.find();
+                    country = line.substring(mcountry.end());
+
+                }
+                if (line.matches("(EMAIL).*")) {
+                    Pattern pmail = Pattern.compile(".*(INTERNET:)");
+                    Matcher mcountry = pmail.matcher(line);
+                    mcountry.find();
+                    email = line.substring(mcountry.end());
+
+                }
+                if (line.matches("(WEB).*")) {
+                    Pattern psite = Pattern.compile("(www.).*");
+                    Matcher msite = psite.matcher(line);
+                    msite.find();
+                    site = line.substring(msite.start());
+
+                }
+                if (line.matches("(END:VCARD)")) {
 
                     contact = new Contact(name, telephone, street ,city, country, email, site);
                     listOfContacts.add(contact);
-                }
-                if (line.matches("(FN:)(.+)$")) {
-                    name = line.substring(3);
-                    contact.setNameAndLastName(name);
-                }
-                if (line.matches(".+\\:\\+.+")) {
-                    telephone = line.substring(21);
-                    contact.setTelNumber(telephone);
-                }
-                if (line.matches(".+\\:.+(STREET)\\:.+")) {
-                    street = line.substring(26);
-                    contact.setStreetAndNum(street);
-                }
-                if (line.matches(".+\\:.+(CITY)\\:.+")) {
-                    city = line.substring(24);
-                    contact.setCity(city);
-                }
-                if (line.matches(".+\\:.+(COUNTRY)\\:.+")) {
-                    country = line.substring(27);
-                    contact.setCountry(country);
-                }
-                if (line.matches(".*\\w\\@.+")) {
-                    email = line.substring(25);
-                    contact.setEmail(email);
-                }
-                if (line.matches(".*(www.).*")) {
-                    site = line.substring(23);
-                    contact.setWebSite(site);
+                    name = "";
+                    telephone = "";
+                    street = "";
+                    city = "";
+                    country = "";
+                    email = "";
+                    site = "";
+
                 }
             }
             listOfContacts.stream().sorted((o1, o2) -> o1.getTelNumber().compareTo(o2.getTelNumber())).forEach(System.out::println);
 
             System.out.println("-".repeat(50));
 
-            FileOutputStream fileOutputStream = new FileOutputStream("result.ser");
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("result.ser"))){
             objectOutputStream.writeObject(listOfContacts);
-            objectOutputStream.close();
+        }
+        catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
-            FileInputStream fileInputStream = new FileInputStream("result.ser");
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+        try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("result.ser"))){
             System.out.println(objectInputStream.readObject());
-            fileInputStream.close();
-
-
+        }
+        catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
