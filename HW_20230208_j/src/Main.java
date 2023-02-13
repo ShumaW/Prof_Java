@@ -92,6 +92,7 @@ public class Main {
             FileInputStream fileInputStream = new FileInputStream("result.ser");
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             System.out.println(objectInputStream.readObject());
+            fileInputStream.close();
 
 
         } catch (IOException e) {
