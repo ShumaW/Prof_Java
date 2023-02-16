@@ -131,3 +131,9 @@ HW_13_02_2023
 - [Main](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230213_j/src/Main.java)
 - [Examlpe](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230208_j/src/Example.java)
 
+HW_15.02.2023
+
+- [Main](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230215_j/src/Main.java)
+- [WrongLoginException](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230215_j/src/WrongLoginException.java)
+- [WrongPasswordException](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230215_j/src/WrongPasswordException.java)
+
