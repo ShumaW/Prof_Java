@@ -23,50 +23,44 @@ public class Main {
         false в другом случае.
      */
 
-
-        try {
-            getLoginAndPassword();
-        } catch (WrongLoginException e) {
-            throw new RuntimeException(e);
-        } catch (WrongPasswordException e) {
-            throw new RuntimeException(e);
-        }
-
+        getLoginAndPassword();
 
     }
 
-    private static void getLoginAndPassword() throws WrongLoginException, WrongPasswordException {
-        Scanner scanner = new Scanner(System.in);
+    private static final Pattern LOGIN = Pattern.compile("\\w");
+    private static final Pattern PASS = Pattern.compile("\\w");
 
+    private static void getLoginAndPassword() {
+        try {
+            Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter login:");
-        String login = scanner.nextLine();
-        Pattern p1 = Pattern.compile("\\w");
-        Matcher m1 = p1.matcher(login);
-        if (!m1.find() || login.length() > 20) throw new WrongLoginException("WRONG!!! You have entered incorrect login.");
-        else
-            System.out.println(true);
+            System.out.println("Enter login:");
+            String login = scanner.nextLine();
+            Matcher m1 = LOGIN.matcher(login);
+            if (!m1.find() || login.length() > 20)
+                throw new WrongLoginException("WRONG!!! You have entered incorrect login.");
+            else
+                System.out.println(true);
 
+            System.out.println("Enter password :");
+            String password = scanner.nextLine();
+            Matcher m2 = PASS.matcher(password);
+            if (!m2.find() || password.length() > 20)
+                throw new WrongPasswordException("WRONG!!! You have entered incorrect password.");
+            else
+                System.out.println(true);
 
-        System.out.println("Enter password :");
-        String password = scanner.nextLine();
-        Pattern p2 = Pattern.compile("\\w");
-        Matcher m2 = p2.matcher(password);
-        if (!m2.find() || password.length() > 20)
-            throw new WrongPasswordException("WRONG!!! You have entered incorrect password.");
-        else
-            System.out.println(true);
+            System.out.println("Confirm password :");
+            String confirmPassword = scanner.nextLine();
+            if (!password.equals(confirmPassword))
+                throw new WrongPasswordException("WRONG!!! You have entered incorrect password.");
+            else
+                System.out.println(true);
 
-        System.out.println("Confirm password :");
-        String confirmPassword = scanner.nextLine();
-        Pattern p3 = Pattern.compile("\\w");
-        Matcher m3 = p3.matcher(confirmPassword);
-        if (!password.equals(confirmPassword))
-            throw new WrongPasswordException("WRONG!!! You have entered incorrect password.");
-        else
-            System.out.println(true);
-
-
-        scanner.close();
+            scanner.close();
+        } catch (WrongLoginException | WrongPasswordException e) {
+            System.out.println(e.getMessage());
+            System.out.println(false);
+        }
     }
 }
