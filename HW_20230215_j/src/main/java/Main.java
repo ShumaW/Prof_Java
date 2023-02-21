@@ -23,14 +23,14 @@ public class Main {
         false в другом случае.
      */
 
-        getLoginAndPassword();
+        checkLoginAndPassword();
 
     }
 
     private static final Pattern LOGIN = Pattern.compile("\\w");
     private static final Pattern PASS = Pattern.compile("\\w");
 
-    private static void getLoginAndPassword() {
+    public static void checkLoginAndPassword() {
         try {
             Scanner scanner = new Scanner(System.in);
 

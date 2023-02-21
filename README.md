@@ -137,3 +137,12 @@ HW_15.02.2023
 - [WrongLoginException](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230215_j/src/WrongLoginException.java)
 - [WrongPasswordException](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230215_j/src/WrongPasswordException.java)
 
+HW_20.02.2023
+
+- [Task1]()
+- [TestTask1]()
+- [Task2]()
+- [TestTask2]()
+- [Task3]()
+- [TestTask3]()
+

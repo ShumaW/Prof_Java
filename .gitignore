@@ -13,3 +13,7 @@ out/
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
+
+### Maven ###
+**/target
+*.xml
