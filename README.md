@@ -139,10 +139,10 @@ HW_15.02.2023
 
 HW_20.02.2023
 
-- [Task1]()
-- [TestTask1]()
-- [Task2]()
-- [TestTask2]()
-- [Task3]()
-- [TestTask3]()
+- [Task1](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230220_j/src/main/java/Task1/TaskOne.java)
+- [TestTask1](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230220_j/src/test/java/Task1/TaskOneTest.java)
+- [Task2](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230220_j/src/main/java/Task2/TaskTwo.java)
+- [TestTask2](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230220_j/src/test/java/Task2/TaskTwoTest.java)
+- [Task3](https://github.com/ShumaW/Prof_Java/tree/master/HW_20230220_j/src/main/java/Task3)
+- [TestTask3](https://github.com/ShumaW/Prof_Java/tree/master/HW_20230220_j/src/test/java/Task3)
 
