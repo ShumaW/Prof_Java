@@ -5,6 +5,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class UserServiceTest {
@@ -50,6 +52,8 @@ class UserServiceTest {
     @Test
     void testDeleteInactive() {
         assertFalse(user2.isActive());
-        Mockito.verify(repository);
+        service.deleteInactive(List.of(user1,user2));
+//        Mockito.verify(repository).deleteUser(2);
+        assertThrows(NullPointerException.class, () -> service.deleteInactive(null));
     }
 }
