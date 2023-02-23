@@ -146,3 +146,7 @@ HW_20.02.2023
 - [Task3](https://github.com/ShumaW/Prof_Java/tree/master/HW_20230220_j/src/main/java/Task3)
 - [TestTask3](https://github.com/ShumaW/Prof_Java/tree/master/HW_20230220_j/src/test/java/Task3)
 
+HW_22.02.2023
+
+- [Main](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230222_j/src/Main.java)
+
