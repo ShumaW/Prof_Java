@@ -19,10 +19,11 @@ public class TaskOne {
         int[] arr1 = {1, 2, 5, 5, 8, 9, 7, 10};
         int[] arr2 = {1, 0, 6, 15, 6, 4, 7, 0, 5};
 
-        addCommonElements(arr1, arr2);
+
     }
 
-    public static boolean addCommonElements(int[] arr1, int[] arr2) {
+    public Integer[] addCommonElements(int[] arr1, int[] arr2) {
+        Object[] result = new Integer[0];
         try {
             if (arr1 == null || arr2 == null) {
                 throw new NullPointerException("One from two arrays is NULL!");
@@ -38,11 +39,12 @@ public class TaskOne {
                     }
                 }
             }
-            System.out.println(set);
+            result = set.stream().toArray(Integer[]::new);
+            System.out.println(Arrays.toString(result));
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        return true;
+        return (Integer[]) result;
     }
 }

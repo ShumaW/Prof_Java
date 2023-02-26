@@ -1,5 +1,6 @@
 package Task2;
 
+import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -16,23 +17,21 @@ public class TaskTwo {
          */
         int[] arr = {0, 3, -2, 4, 3, 2, 5, 5, 6, 6, 77, -2};
 
-        deleteRepeatingElements(arr);
+
+
 
     }
 
-    public static boolean deleteRepeatingElements(int[] arr) {
+    public  int[] deleteRepeatingElements(int[] arr) {
+        int[] res = {0};
         try {
             if (arr == null) throw new NullPointerException("Array is NULL!");
 
-            Set set = new LinkedHashSet();
-
-            for (int i = 0; i < arr.length; i++) {
-                set.add(arr[i]);
-            }
-            System.out.println(set);
+            res = Arrays.stream(arr).distinct().toArray();
+            System.out.println(Arrays.toString(res));
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        return true;
+        return res;
     }
 }

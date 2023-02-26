@@ -51,6 +51,7 @@ class UserServiceTest {
 
     @Test
     void testDeleteInactive() {
+
         assertFalse(user2.isActive());
         service.deleteInactive(List.of(user1,user2));
 //        Mockito.verify(repository).deleteUser(2);
