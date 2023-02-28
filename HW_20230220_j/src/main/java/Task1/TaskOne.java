@@ -22,14 +22,14 @@ public class TaskOne {
 
     }
 
-    public Integer[] addCommonElements(int[] arr1, int[] arr2) {
-        Object[] result = new Integer[0];
-        try {
-            if (arr1 == null || arr2 == null) {
-                throw new NullPointerException("One from two arrays is NULL!");
+    public Integer[] addCommonElements(Integer[] arr1, Integer[] arr2) {
+        Integer[] result = new Integer[0];
+
+            if (arr1 == null || arr2 == null || arr1.length == 0 || arr2.length == 0) {
+                return new Integer[0];
             }
 
-            Set set = new LinkedHashSet();
+            Set<Integer> set = new LinkedHashSet();
 
             for (int i = 0; i < arr1.length; i++) {
                 for (int j = 0; j < arr2.length; j++) {
@@ -42,9 +42,16 @@ public class TaskOne {
             result = set.stream().toArray(Integer[]::new);
             System.out.println(Arrays.toString(result));
 
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+
+        return result;
+    }
+    public Integer[] findCommon(Integer[] a,  Integer[] b){
+        Set<Integer> set = new HashSet<>();
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < b.length; j++) {
+                set.add(a[i]);
+            }
         }
-        return (Integer[]) result;
+        return set.toArray(new Integer[set.size()]);
     }
 }

@@ -150,3 +150,6 @@ HW_22.02.2023
 
 - [Main](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230222_j/src/Main.java)
 
+HW_27.02.2023
+
+- [Main](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230227_j/src/Main.java)

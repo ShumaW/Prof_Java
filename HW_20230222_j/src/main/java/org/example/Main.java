@@ -27,6 +27,8 @@ public class Main {
         LocalDate date1 = startFeb.with(wednesday);
         LocalDate date2 = startFeb.with(monday);
 
+
+
         System.out.println(dayOfWeek);
         date1.datesUntil(endFeb, Period.ofDays(7)).forEach(s -> {
             System.out.println(s + " " + timeToStart);
@@ -44,7 +46,10 @@ public class Main {
 
         getTimeToArrival(ZoneId.of("America/Los_Angeles"), ZoneId.of("Etc/GMT+1"), 650 );
 
-        /*A sequence is given:
+        /*
+        Вопрос в тесте :
+
+        A sequence is given:
 
         11, 12, 13, 11, 15, 16, 17, 18, 19, 20, 14, 15
 

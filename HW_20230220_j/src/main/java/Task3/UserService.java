@@ -33,10 +33,9 @@ public class UserService {
         repository.saveUser(user);
     }
 
-    public void deleteInactive(List users) {
-        for (int i = 0; i < users.size(); i++) {
-            User user = repository.getUserById(i);
-            if (!user.isActive()) {
+    public void deleteInactive(List<User> users){
+        for (User user : users) {
+            if (!user.isActive()){
                 repository.deleteUser(user.getId());
             }
         }

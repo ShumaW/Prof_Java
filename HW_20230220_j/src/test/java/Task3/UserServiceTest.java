@@ -30,13 +30,13 @@ class UserServiceTest {
 
 
     @Test
-    void isActive() {
+    public void isActive() {
         assertTrue(service.isActive(1));
         assertFalse(service.isActive(2));
     }
 
     @Test
-    void deactivate() {
+    public void deactivate() {
         assertTrue(user1.isActive());
         service.deactivate(1);
         assertFalse(user1.isActive());
@@ -50,11 +50,11 @@ class UserServiceTest {
     }
 
     @Test
-    void testDeleteInactive() {
+    public void testDeleteInactive() {
 
-        assertFalse(user2.isActive());
         service.deleteInactive(List.of(user1,user2));
-//        Mockito.verify(repository).deleteUser(2);
-        assertThrows(NullPointerException.class, () -> service.deleteInactive(null));
+        Mockito.verify(repository, Mockito.times(0)).deleteUser(1);
+        Mockito.verify(repository).deleteUser(2);
+//        assertThrows(NullPointerException.class, () -> service.deleteInactive(null));
     }
 }
