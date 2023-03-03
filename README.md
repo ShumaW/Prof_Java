@@ -153,3 +153,8 @@ HW_22.02.2023
 HW_27.02.2023
 
 - [Main](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230227_j/src/main/java/org/example/Main.java)
+
+HW_01.03.2023
+
+- [Main](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230301_j/src/main/java/org/example/Main.java)
+- [homework.txt](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230301_j/src/homework.txt)

@@ -19,6 +19,7 @@ public class Main {
         System.out.println(“Total divisible by “ + number + “: “ + count);
 
          */
+        System.out.println(Runtime.getRuntime().availableProcessors()); // для определения количества потоков
         long start = System.currentTimeMillis();
         divisionByAGivenNumber(7);
         System.out.println(System.currentTimeMillis() - start);
@@ -26,6 +27,7 @@ public class Main {
         start = System.currentTimeMillis();
         divisionByAGivenNumberParallel(7);
         System.out.println(System.currentTimeMillis() - start);
+
     }
 
     public static void divisionByAGivenNumber(int number){
