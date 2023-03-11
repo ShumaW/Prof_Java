@@ -158,3 +158,8 @@ HW_01.03.2023
 
 - [Main](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230301_j/src/main/java/org/example/Main.java)
 - [homework.txt](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230301_j/src/homework.txt)
+
+HW_06.03.2023
+
+- [BankAccount](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230306_j/src/main/java/org/example/BankAccount.java)
+- [BankAccountManager](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230306_j/src/main/java/org/example/BankAccountManager.java)

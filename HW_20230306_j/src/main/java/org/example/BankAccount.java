@@ -1,0 +1,24 @@
+package org.example;
+
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class BankAccount {
+    private static AtomicInteger sum = new AtomicInteger(0);
+
+    public void deposit(int amount) {
+        int res = sum.get();
+        int old = res;
+        res += amount;
+        sum.compareAndSet(old, res);
+    }
+
+    public void withdraw(int amount) {
+        int res = sum.get();
+        res -= amount;
+        sum.set(res);
+    }
+
+    public AtomicInteger getSum() {
+        return sum;
+    }
+}
