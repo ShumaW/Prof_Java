@@ -14,11 +14,12 @@ public class BankAccount {
 
     public void withdraw(int amount) {
         int res = sum.get();
+        int old = res;
         res -= amount;
-        sum.set(res);
+        sum.compareAndSet(old, res);
     }
 
-    public AtomicInteger getSum() {
-        return sum;
+    public int getSum() {
+        return sum.get();
     }
 }
