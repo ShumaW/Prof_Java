@@ -4,7 +4,6 @@ public class BankAccountManager {
     public static void main(String[] args) {
         BankAccount bankAccount = new BankAccount();
 
-
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -42,7 +41,5 @@ public class BankAccountManager {
                 }
             }
         }
-
-
     }
 }
