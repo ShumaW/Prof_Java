@@ -166,6 +166,6 @@ HW_06.03.2023
 
 HW_13.03.2023
 
-- [BlockingQueue]()
-- [Crossbow]()
-- [ReentrantLockBlockingQueue]()
+- [BlockingQueue](https://github.com/ShumaW/Prof_Java/tree/master/HW_20230313_j/src/main/java/BlockingQueue)
+- [Crossbow](https://github.com/ShumaW/Prof_Java/tree/master/HW_20230313_j/src/main/java/Crossbow)
+- [ReentrantLockBlockingQueue](https://github.com/ShumaW/Prof_Java/tree/master/HW_20230313_j/src/main/java/ReentrantLockBlockingQueue)
