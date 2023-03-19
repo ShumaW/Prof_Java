@@ -169,3 +169,8 @@ HW_13.03.2023
 - [BlockingQueue](https://github.com/ShumaW/Prof_Java/tree/master/HW_20230313_j/src/main/java/BlockingQueue)
 - [Crossbow](https://github.com/ShumaW/Prof_Java/tree/master/HW_20230313_j/src/main/java/Crossbow)
 - [ReentrantLockBlockingQueue](https://github.com/ShumaW/Prof_Java/tree/master/HW_20230313_j/src/main/java/ReentrantLockBlockingQueue)
+
+HW_15.03.2023
+
+- [Task1](https://github.com/ShumaW/Prof_Java/tree/master/HW_20230315_j/src/main/java/Task1)
+- [Task2](https://github.com/ShumaW/Prof_Java/tree/master/HW_20230315_j/src/main/java/Task2)
