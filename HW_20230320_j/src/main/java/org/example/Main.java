@@ -47,7 +47,7 @@ public class Main {
 
         for (int i = 0; i < countBuilding; i++) {
             // Если строительство будет вести только одна бригада, достаточно переписать Executors.newSingleThreadExecutor()
-            // Если бригады будут создаваться по количеству стоящихся домов, а после распускаться, достаточно у Executors.newFixedThreadPool указать количество домов. В данном случае счётчик countBuilding.
+            // Если бригады будут создаваться по количеству строящихся домов, а после распускаться, достаточно у Executors.newFixedThreadPool указать количество домов. В данном случае 4 заменить на счётчик countBuilding.
             ExecutorService building = Executors.newFixedThreadPool(4);
             try {
                 Future<Integer> future1 = building.submit(new House());
