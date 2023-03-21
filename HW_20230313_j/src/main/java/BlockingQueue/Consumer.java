@@ -20,7 +20,7 @@ public class Consumer implements Runnable{
                 System.out.println(Thread.currentThread().getName() + " received message: " + message +
                         " Elements in queue:" + queue.getSize());
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(10000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

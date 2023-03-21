@@ -174,3 +174,8 @@ HW_15.03.2023
 
 - [Task1](https://github.com/ShumaW/Prof_Java/tree/master/HW_20230315_j/src/main/java/Task1)
 - [Task2](https://github.com/ShumaW/Prof_Java/tree/master/HW_20230315_j/src/main/java/Task2)
+
+HW_20.03.2023
+
+- [Main](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230320_j/src/main/java/org/example/Main.java)
+- [CountPrimes](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230320_j/src/main/java/org/example/CountPrimes.java)
