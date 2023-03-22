@@ -1,6 +1,5 @@
-package Task1;
+package task1;
 
-import java.util.Arrays;
 import java.util.concurrent.Exchanger;
 
 public class MainTaskOne {
@@ -11,9 +10,9 @@ public class MainTaskOne {
      * грузовик 1 везет: посылка A -> C и посылка A -> D
      * грузовик 2 везет: посылка B -> C и посылка B -> D
      * A  _ _ _ _             _ _ _ _ B
-     * \          /
-     * - - E - -
-     * _ _ _ _ /          \ _ _ _ _
+     *           \          /
+     *            - - E - -
+     *   _ _ _ _ /          \ _ _ _ _
      * C                              D
      * <p>
      * <p>
@@ -25,14 +24,14 @@ public class MainTaskOne {
      * грузовик 2: посылка B -> C и B -> D, после обмена: B -> C и A -> C
      */
     public static void main(String[] args) {
-        Exchanger exchanger = new Exchanger<>();
-        Good[] goods1 = {new Good("Appel","A"), new Good("Orange","B")};
-        Good[] goods2 = {new Good("Bread", "B"), new Good("Beef", "A")};
+        Exchanger<Good> exchanger = new Exchanger<>();
+        Good[] goods1 = {new Good("Appel","A"), new Good("Orange","B"), new Good("Banana", "A")};
+        Good[] goods2 = {new Good("Bread", "B"), new Good("Beef", "A"), new Good("Milk", "B")};
 
         try {
-            new Truck("Track1",goods1,exchanger);
+            new Truck("Track1",goods1,exchanger, "A");
             Thread.sleep(3000);
-            new Truck("Track2",goods2,exchanger);
+            new Truck("Track2",goods2,exchanger, "B");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

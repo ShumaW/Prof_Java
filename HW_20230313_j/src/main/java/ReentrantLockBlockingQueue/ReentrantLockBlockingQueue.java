@@ -20,45 +20,46 @@ public class ReentrantLockBlockingQueue<T> {
 
      */
 
-    private int size = 0;
 
+    private int size;
     public ReentrantLockBlockingQueue(int size) {
         this.size = size;
+        this.queue = new ArrayDeque<>(size);
     }
 
     private Queue<T> queue = new ArrayDeque<>(size);
     private ReentrantLock lock = new ReentrantLock(true);
-    private Condition condition = lock.newCondition();
+    private Condition queueIsEmpty = lock.newCondition();
+    private Condition queueIsFull = lock.newCondition();
 
 
     public void put(T item) {
-        while (queue.size() <= size) {
-            lock.lock();
-            try {
-                queue.add(item);
-                condition.signal();
-            } finally {
-                lock.unlock();
+        lock.lock();
+        try {
+            while (queue.size() >= size) {
+                queueIsFull.awaitUninterruptibly();
             }
+            queue.add(item);
+            queueIsEmpty.signal();
+        } finally {
+            lock.unlock();
         }
     }
 
-    public T take() {
+    public T take(){
         lock.lock();
         try {
-            while (queue.isEmpty()) {
-                try {
-                    condition.await();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+            while (queue.isEmpty()){
+                queueIsEmpty.awaitUninterruptibly();
             }
+            queueIsFull.signal();
             return queue.poll();
         } finally {
             lock.unlock();
         }
 
     }
+
 
     public int getSize() {
         lock.lock();
