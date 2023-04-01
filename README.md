@@ -1,9 +1,9 @@
 # Prof_Java_HomeWork
 
 HW_29.03.2023
-- [Hw20230329JApplication](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230329_j/src/main/java/School/School.java)
-- [EmployeeController](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230329_j/src/main/java/School/School.java)
-- [Employee](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230329_j/src/main/java/School/School.java)
+- [Hw20230329JApplication](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230329_j/src/main/java/com/example/hw_20230329_j/Hw20230329JApplication.java)
+- [EmployeeController](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230329_j/src/main/java/com/example/hw_20230329_j/EmployeeController.java)
+- [Employee](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230329_j/src/main/java/com/example/hw_20230329_j/Employee.java)
 
 HW_22.03.2023
 - [School](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230322_j/src/main/java/School/School.java)
