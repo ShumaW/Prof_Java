@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="com.example.hw_20230403_j.Hw20230403JApplication" id="hw20230403JApplication" scope="prototype"/>
+
+    <bean class="com.example.hw_20230403_j.Order" id="order1">
+        <constructor-arg name="item" value="Headphone"/>
+        <constructor-arg name="price" value="250.95"/>
+    </bean>
+
+    <bean class="com.example.hw_20230403_j.Order" id="order2">
+        <constructor-arg name="item" value="IPhone 14"/>
+        <constructor-arg name="price" value="599.99"/>
+    </bean>
+
+    <bean class="com.example.hw_20230403_j.PaymentGateway" id="gateway1" >
+        <property name="order" ref="order1"/>
+    </bean>
+
+    <bean class="com.example.hw_20230403_j.PaymentGateway" id="gateway2" >
+        <property name="order" ref="order2"/>
+    </bean>
+</beans>
