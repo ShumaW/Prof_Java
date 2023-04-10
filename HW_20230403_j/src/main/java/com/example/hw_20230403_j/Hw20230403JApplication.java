@@ -27,7 +27,8 @@ public class Hw20230403JApplication {
 
 //        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("hw20230403application.xml");
 //        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppContext.class);
-        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppAutoContext.class);
+//        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppAutoContext.class);
+        ConfigurableApplicationContext context = SpringApplication.run(AppAutoContext.class, args);
         System.out.println();
 
         PaymentGateway paymentGateway1 = (PaymentGateway) context.getBean("gateway1");

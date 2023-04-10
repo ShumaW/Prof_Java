@@ -3,6 +3,7 @@ package com.example.hw_20230403_j;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.stereotype.Component;
 
 @Getter
 @Setter
