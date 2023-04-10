@@ -1,6 +1,6 @@
 # Prof_Java_HomeWork
 
-[EmployeeWeb](https://github.com/ShumaW/Prof_Java/tree/master/employeeWeb)
+[EmployeeWeb_SpringApp](https://github.com/ShumaW/Prof_Java/tree/master/employeeWeb)
 
 HW_03.04.2023
 - [Hw20230403JApplication](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230403_j/src/main/java/com/example/hw_20230403_j/Hw20230403JApplication.java)
