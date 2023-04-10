@@ -20,7 +20,7 @@
             <th>Role</th>
             <th>E-mail</th>
         </tr>
-        <c:forEach items="${userById}" var="user">
+        <c items="${userById}" var="user">
             <tr>
                 <td>${userById.username}</td>
                 <td>${userById.password}</td>
@@ -28,7 +28,7 @@
                 <td>${userById.role}</td>
                 <td>${userById.email}</td>
             </tr>
-        </c:forEach>
+        </c>
         </tbody>
     </table>
 </div>
