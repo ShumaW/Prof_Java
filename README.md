@@ -1,5 +1,12 @@
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=30&pause=1000&color=FFFFFF&width=435&lines=Prof_Java_HomeWork" alt="Typing SVG" /></a>
 
+HW_19.04.2023
+- [LanguageApp](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230419_j/src/main/java/org/example/LanguageApp.java)
+- [LanguageDAO](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230419_j/src/main/java/org/example/LanguageDAO.java)
+- [ConnectorDB](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230419_j/src/main/java/org/example/ConnectorDB.java)
+- [CountryLanguage](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230419_j/src/main/java/org/example/CountryLanguage.java)
+- [CountryLanguageDAO](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230419_j/src/main/java/org/example/CountryLanguageDAO.java)
+
 [EmployeeWeb_SpringApp](https://github.com/ShumaW/Prof_Java/tree/master/employeeWeb)
 
 HW_03.04.2023
