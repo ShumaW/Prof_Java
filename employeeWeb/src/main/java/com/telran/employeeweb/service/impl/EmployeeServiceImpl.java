@@ -4,6 +4,8 @@ import com.telran.employeeweb.model.entity.Employee;
 import com.telran.employeeweb.repository.EmployeeRepository;
 import com.telran.employeeweb.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,55 +23,54 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public List<Employee> getEmployees() {
-        return repository.getAll();
+//        return repository.findAll(Sort.by("name").ascending());
+//        Page<Employee> page = repository.findAll(PageRequest.of(0, 5, Sort.by("surname")));
+//        return page.getContent();
+//        return repository.specialQuery();
+//        return repository.specialQueryTwo("Fox");
+//        return repository.specialQueryThree("Fox");
+        return repository.findAll();
     }
 
     @Override
-    public Optional<Employee> findEmployeeByIdAndName(String id, String name) {
-        List<Employee> employees = repository.getAll();
-        Optional<Employee> found = employees.stream().filter(employee -> {
-            if (id != null) {
-                if (name != null) {
-                    return employee.getId().equals(id) && employee.getName().equals(name);
-                } else {
-                    return employee.getId().equals(id);
-                }
-            }
-            return employee.getName().equals(name);
-        }).findAny();
-        return found;
+    public Page<Employee> getEmployees(Pageable pageable) {
+        return repository.findAll(pageable);
     }
 
     @Override
-    public void add(Employee employee) {
-        repository.add(employee);
+    public List<Employee> findEmployeeByNameOrSurname(String name, String surname) {
+        return repository.findAllByNameOrSurname(name, surname);
     }
 
     @Override
-    public boolean updateEmployee(Employee employee) {
-        List<Employee> employees = repository.getAll();
-        for (int i = 0; i < employees.size(); i++) {
-            if (employees.get(i).getId().equals(employee.getId())){
-                repository.updateById(employee);
-                return true;
-            }
-        }
-        repository.add(employee);
-        return false;
+    public Optional<Employee> findById(String id) {
+        return repository.findById(id);
+    }
+
+    @Override
+    public Page<Employee> findAllByAgeGreaterThanEqual(Integer age, Pageable pageable) {
+        return repository.findAllByAgeGreaterThanEqual(age, pageable);
+    }
+
+    @Override
+    public Employee addOrUpdate(Employee employee) {
+        return repository.save(employee);
     }
 
     @Override
     public Employee updateEmployeeSurnameAndAge(String id, String surname, int age) {
-        Employee employee = repository.getById(id);
-        if (employee != null) {
+        Optional<Employee> byId = repository.findById(id);
+        if (byId.isPresent()) {
+            Employee employee = byId.get();
             employee.setSurname(surname);
             employee.setAge(age);
+            return repository.save(employee);
         }
-        return employee;
+        return null;
     }
 
     @Override
     public void deleteEmployee(String id) {
-        repository.deleteEmployee(id);
+        repository.deleteById(id);
     }
 }

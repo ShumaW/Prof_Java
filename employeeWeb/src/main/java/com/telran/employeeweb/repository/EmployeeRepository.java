@@ -1,47 +1,31 @@
 package com.telran.employeeweb.repository;
 
 import com.telran.employeeweb.model.entity.Employee;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Repository
-public class EmployeeRepository {
+public interface EmployeeRepository extends JpaRepository<Employee, String> {
 
-    private List<Employee> employees = new ArrayList<>();
+    List<Employee> findAllByNameOrSurname(String name, String surname);
 
-    public EmployeeRepository() {
-        employees.addAll(Arrays.asList(
-                new Employee("Tom"),
-                new Employee("Jane"),
-                new Employee("Mary"),
-                new Employee("Mark")
-        ));
-    }
+    List<Employee> findTop3ByAgeAfterOrderByAgeDesc(Integer age);
 
-    public List<Employee> getAll(){
-        return employees;
-    }
+    Page<Employee> findAllByAgeGreaterThanEqual(Integer age, Pageable pageable);
 
-    public Employee getById(String id) {
-        return employees.stream().filter(e -> e.getId().equals(id)).findAny().orElse(null);
-    }
+    @Query("select e from Employee e where e.name = 'Bob'")
+    List<Employee> specialQuery();
 
-    public void add(Employee employee) {
-        employees.add(employee);
-    }
+    @Query("select e from Employee e where e.surname = ?1")
+    List<Employee> specialQueryTwo(String s);
 
-    public void deleteEmployee(String id) {
-        employees.removeIf(employee -> employee.getId().equals(id));
-    }
+    @Query("select e from Employee e where e.surname = :surname")
+    List<Employee> specialQueryThree(@Param("surname") String surname);
 
-    public void updateById(Employee employee) {
-        for (int i = 0; i < employees.size(); i++) {
-            if (employees.get(i).getId().equals(employee.getId())){
-                employees.set(i, employee);
-            }
-        }
-    }
 }
