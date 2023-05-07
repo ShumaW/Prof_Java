@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Search</title>
+
+  <link rel="stylesheet" href="/style.css" type="text/css"/>
+</head>
+<body>
+
+<div class="container">
+  <div th:if="${foundUser}">
+
+    <h2>User</h2>
+
+    <table>
+      <thead>
+      <tr>
+        <th>№</th>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Id</th>
+        <th>Email</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="user, iter : ${foundUser}"
+          th:style="${iter.odd}? 'font-weight: bold;'">
+        <td th:text="${iter.index}+1"></td>
+        <td th:text="${user.username}"></td>
+        <td th:text="${user.role}"></td>
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.email}"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div th:unless="${foundUser}">
+    <p th:text="${notPresentMessage}"></p>
+  </div>
+
+</div>
+
+</body>
+</html>

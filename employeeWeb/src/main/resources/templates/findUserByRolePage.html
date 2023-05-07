@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Search</title>
+
+  <link rel="stylesheet" href="/style.css" type="text/css"/>
+</head>
+<body>
+
+<div class="container">
+  <h2>User By Role Search:</h2>
+
+  <table>
+    <thead>
+    <tr>
+      <th>№</th>
+      <th>Name</th>
+      <th>Role</th>
+      <th>Email</th>
+      <th>Id</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th><a th:href="@{/users/findByRole(role=${param.role}, page=0, sort='role,asc')}">A->Z</a></th>
+      <th></th>
+      <th></th>
+      <th><a th:href="@{/users/findByAge(id=${param.id}, page=0, sort='id,asc')}">0->9</a></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th><a th:href="@{/users/findByRole(role=${param.role}, page=0, sort='role,desc')}">Z->A</a></th>
+      <th></th>
+      <th></th>
+      <th><a th:href="@{/users/findByAge(id=${param.id}, page=0, sort='id,вуіс')}">9->0</a></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user, iter : ${page.content}"
+        th:style="${iter.odd}? 'font-weight: bold;'">
+      <td th:text="${iter.index}+1"></td>
+      <td th:text="${user.username}"></td>
+      <td th:text="${user.role}"></td>
+      <td th:text="${user.email}"></td>
+      <td th:text="${user.id}"></td>
+    </tr>
+    </tbody>
+  </table>
+  <a th:href="@{/users/findByRole(role=${param.role}, page=${page.number - 1}, sort=${sortBy})}">Previous page</a>
+  <a th:href="@{/users/findByRole(role=${param.role}, page=${page.number + 1}, sort=${sortBy})}">Next page</a>
+
+</div>
+
+
+
+</body>
+</html>

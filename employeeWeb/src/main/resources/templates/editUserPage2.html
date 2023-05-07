@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit User Page</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+
+<h2>User to edit:</h2>
+
+<form th:action="@{/users/editUserPage2}" th:object="${editUser}" th:method="post">
+  <input type="hidden" th:field="*{name}">
+  <input type="hidden" th:field="*{role}">
+  <input type="hidden" th:field="*{id}">
+  <input type="hidden" th:field="*{email}">
+  <div>
+    <label>Additional Info:&nbsp;</label>
+    <label>
+      <textarea th:field="*{additionalInfo}"></textarea>
+    </label>
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+
+</body>
+</html>

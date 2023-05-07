@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users list</title>
+    <link rel="stylesheet" href="/style.css" type="text/css"/>
+</head>
+<body>
+
+<h2>Users</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>№</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Id</th>
+        <th>Role</th>
+        <th>Additional Info</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user, iter : ${users}"
+        th:style="${iter.odd}? 'font-weight: bold;'">
+        <td th:text="${iter.index}+1"></td>
+        <td th:text="${user.username}"></td>
+        <td th:text="${user.email}"></td>
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.role}"></td>
+        <td th:text="${user.additionalInfo}"></td>
+        <td>
+            <form th:action="@{/users/edit}" th:method="post">
+                <div>
+                    <input type="hidden" th:value="${user.id}" name="userId">
+                </div>
+                <div>
+                    <button type="submit">Edit</button>
+                </div>
+            </form>
+        </td>
+        <td>
+            <form th:action="@{/users/delete}" th:method="post">
+                <div>
+                    <input type="hidden" th:value="${user.id}" name="userId">
+                </div>
+                <div>
+                    <button type="submit">Delete</button>
+                </div>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Add new User:</h2>
+
+<form th:action="@{/users}" th:object="${userToAdd}" th:method="post">
+    <div>
+        <label>Name:&nbsp;</label>
+        <label>
+            <input type="text" th:field="*{username}">
+        </label>
+    </div>
+    <div>
+        <label>Password:&nbsp;</label>
+        <label>
+            <input type="text" th:field="*{password}">
+        </label>
+    </div>
+    <div>
+        <label>Email:&nbsp;</label>
+        <label>
+            <input type="text" th:field="*{email}">
+        </label>
+    </div>
+    <div>
+        <label>Id:&nbsp;</label>
+        <label>
+            <input type="text" th:field="*{id}">
+        </label>
+    </div>
+    <div>
+        <label>Role :&nbsp;</label>
+        <label>
+            <input type="text" th:field="*{role}">
+        </label>
+    </div>
+    <div>
+        <label>Additional Info:&nbsp;</label>
+        <label>
+            <input type="text" th:field="*{additionalInfo}">
+        </label>
+    </div>
+    <div>
+        <button type="submit">Add</button>
+    </div>
+</form>
+
+<div th:if="${deleted}">
+    User with id <span th:text="${deleted}"></span> successfully deleted
+</div>
+<div th:if="${added}">
+    User with id <span th:text="${added}"></span> successfully added
+</div>
+<div th:if="${updated}">
+    User with id <span th:text="${updated}"></span> successfully updated
+</div>
+
+</body>
+</html>

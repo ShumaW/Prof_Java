@@ -4,50 +4,52 @@ import com.telran.employeeweb.model.entity.Employee;
 import com.telran.employeeweb.model.entity.User;
 import com.telran.employeeweb.repository.UserRepository;
 import com.telran.employeeweb.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
 
+    @Autowired
     public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
     @Override
     public List<User> getUser() {
-        return userRepository.getAll();
+        return userRepository.findAll();
     }
 
     @Override
-    public void add(User user) {
-        userRepository.add(user);
+    public Page<User> getUser(Pageable pageable) {
+        return userRepository.findAll(pageable);
     }
 
     @Override
-    public boolean updateUser(User user) {
-        List<User> users = userRepository.getAll();
-        for (int i = 0; i < users.size(); i++) {
-            if (users.get(i).getId().equals(user.getId())){
-                userRepository.updateById(user);
-                return true;
-            }
-        }
-        userRepository.add(user);
-        return false;
+    public List<User> findByUsernameOrEmail(String name, String email){
+        return userRepository.findByUsernameOrEmail(name,email);
+    }
+
+    @Override
+    public Page<User> findAllByRole(String role, Pageable pageable) {
+        return userRepository.findAllByRole(role,pageable);
+    }
+
+    @Override
+    public User addOrUpdate(User user) {
+        return userRepository.save(user);
     }
 
     @Override
     public void deleteUser(String id) {
-        userRepository.deleteUser(id);
-    }
-
-    @Override
-    public List<User> getUsers() {
-        return userRepository.getAll();
+        userRepository.deleteById(id);
     }
 
     @Override
@@ -55,5 +57,21 @@ public class UserServiceImpl implements UserService {
         return userRepository.getById(id);
     }
 
+    @Override
+    public Optional<User> findById(String id) {
+        return userRepository.findById(id);
+    }
+
+    @Override
+    public User updateUserNameAndRole(String id, String username, String role) {
+        Optional<User> byId = userRepository.findById(id);
+        if (byId.isPresent()) {
+            User user = byId.get();
+            user.setUsername(username);
+            user.setRole(role);
+            return userRepository.save(user);
+        }
+        return null;
+    }
 
 }

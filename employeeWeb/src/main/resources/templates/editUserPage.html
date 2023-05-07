@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit User Page</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+
+<h2>User to edit:</h2>
+
+<form th:action="@{/users/editUserPage}" th:object="${editUser}" th:method="post">
+  <div>
+    <label>Name:&nbsp;</label>
+    <label>
+      <input type="text" th:field="*{username}">
+    </label>
+  </div>
+  <div>
+    <label>Password:&nbsp;</label>
+    <label>
+      <input type="text" th:field="*{password}">
+    </label>
+  </div>
+  <div>
+    <label>Role:&nbsp;</label>
+    <label>
+      <input type="text" th:field="*{role}">
+    </label>
+  </div>
+  <div>
+    <label>Id:&nbsp;</label>
+    <label>
+      <input type="text" th:field="*{id}">
+    </label>
+  </div>
+  <div>
+    <label>Email:&nbsp;</label>
+    <label>
+      <input type="text" th:field="*{email}">
+    </label>
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+
+
+
+</body>
+</html>
