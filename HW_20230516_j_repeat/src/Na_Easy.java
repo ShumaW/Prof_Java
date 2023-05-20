@@ -70,7 +70,13 @@ public class Na_Easy {
          * Найти наибольшую сумму подмассива с нечетным количеством элементов.
          */
         System.out.println("-".repeat(25) + " Уровень сложности 5 из 10 " + "-".repeat(25));
+        int[] arr6 = {25, 26, 27, 28, 29, 30, 1, 2, 3, 4, 5, 9, 10, 11, 12};
+        largestSequence(arr6);
 
+        int[] arr7 = {1, 5, 8, 9, 3, 7, 6, 12};
+        System.out.println(maxSumWithOddElem(arr7));
+        int[] arr8 = {25, 1, 5, 8, 9, 3, 7, 6, 12};
+        System.out.println(maxSumWithOddElem(arr8));
 
     }
 
@@ -229,9 +235,9 @@ public class Na_Easy {
     }
 
     public static int[] twoMin(int[] arr) {  // int[] arr = {2, 5, 6, 8, 2, 1, 9, 10};
-        int[] res = {arr[0],arr[1]};            // int[] res = {2, 5}
+        int[] res = {arr[0], arr[1]};            // int[] res = {2, 5}
         for (int i = 1; i < arr.length; i++) {
-            if ( res[0] > arr[i]) {
+            if (res[0] > arr[i]) {
                 res[1] = res[0];
                 res[0] = arr[i];
             } else if (res[1] > arr[i]) {
@@ -239,5 +245,51 @@ public class Na_Easy {
             }
         }
         return res;
+    }
+
+    public static void largestSequence(int[] arr) {
+        int count = 1;
+        int maxSequence = 1;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] == arr[i - 1] + 1) {
+                count++;
+                maxSequence = Math.max(maxSequence, count);
+            } else {
+                count = 1;
+            }
+        }
+        System.out.println(maxSequence);
+    }
+
+    public static int maxSumWithOddElem(int[] arr) {
+        int sum = 0;
+        int maxSum = 0;
+        if (arr.length % 2 == 0) {
+            for (int i = 0; i < arr.length - 1; i++) {  // {1,5,8,9,3,7,6,12}
+                sum += arr[i];
+            }
+            maxSum = Math.max(maxSum, sum);
+            sum = 0;
+            for (int i = 1; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            maxSum = Math.max(maxSum, sum);
+        } else {
+            for (int i = 0; i < arr.length - 2; i++) {  // {25,1,5,8,9,3,7,6,12}
+                sum += arr[i];
+            }
+            maxSum = Math.max(maxSum, sum);
+            sum = 0;
+            for (int i = 1; i < arr.length - 1; i++) {
+                sum += arr[i];
+            }
+            maxSum = Math.max(maxSum, sum);
+            sum = 0;
+            for (int i = 2; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            maxSum = Math.max(maxSum, sum);
+        }
+        return maxSum;
     }
 }
