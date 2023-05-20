@@ -1,5 +1,9 @@
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=30&pause=1000&color=FFFFFF&width=435&lines=Prof_Java_HomeWork" alt="Typing SVG" /></a>
 
+HW_16.05.2023
+- [Na_Easy](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230516_j_repeat/src/Na_Easy.java)
+- [Little_Harder](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230516_j_repeat/src/Little_Harder.java)
+
 HW_11.05.2023
 - [Part1](https://github.com/ShumaW/Prof_Java/tree/master/HW_20230511_j/src/Part_1)
 - [Part2](https://github.com/ShumaW/Prof_Java/tree/master/HW_20230511_j/src/Part_2)
