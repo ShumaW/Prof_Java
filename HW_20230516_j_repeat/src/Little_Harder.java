@@ -11,9 +11,9 @@ public class Little_Harder {
                 {1, 0, 1, 1, 0},
                 {0, 0, 0, 0, 0}
         };
-
         int maxZeroSubmatrixSize = findMaxZeroSubmatrix(matrix);
         System.out.println("Max Zero Submatrix Size: " + maxZeroSubmatrixSize + "x" + maxZeroSubmatrixSize);
+
         System.out.println("-".repeat(25) + " Task 2 " + "-".repeat(25));
         int[][] grid = {
                 {1, 3, 1},
