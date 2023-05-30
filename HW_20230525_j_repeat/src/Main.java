@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
@@ -39,7 +38,7 @@ public class Main {
         System.out.println(sumElem(list));
 
         System.out.println("-".repeat(25) + " Task 9 " + "-".repeat(25));
-        System.out.println(bigestElem(list));
+        System.out.println(biggestElem(list));
 
         System.out.println("-".repeat(25) + " Task 10 " + "-".repeat(25));
         ArrayList<Integer> list1 = new ArrayList<>(List.of(22, 56, 13, 4, 9, 87, 11));
@@ -52,7 +51,7 @@ public class Main {
         System.out.println(quantityPositiveElement(list2));
 
         System.out.println("-".repeat(25) + " Task 12 " + "-".repeat(25));
-        System.out.println(findElemnt(list2, 4));
+        System.out.println(findElement(list2, 4));
 
         System.out.println("-".repeat(25) + " Task 13 " + "-".repeat(25));
         System.out.println(list2);
@@ -90,8 +89,8 @@ public class Main {
     public static int sumElemArr(int[] arr) {
         int sum = 0;
         if (arr != null) {
-            for (int i = 0; i < arr.length; i++) {
-                sum += arr[i];
+            for (int j : arr) {
+                sum += j;
             }
         }
         return sum;
@@ -104,12 +103,11 @@ public class Main {
     public static int[] maxAndMinForArray(int[] arr) {
         int max = arr[0];
         int min = arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            max = Math.max(max, arr[i]);
-            min = Math.min(min, arr[i]);
+        for (int j : arr) {
+            max = Math.max(max, j);
+            min = Math.min(min, j);
         }
-        int[] minMax = {min, max};
-        return minMax;
+        return new int[]{min, max};
     }
 
     /**
@@ -182,9 +180,9 @@ public class Main {
 
     public static int sumOfPositiveElem(int[] arr) {
         int sum = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > 0) {
-                sum += arr[i];
+        for (int j : arr) {
+            if (j > 0) {
+                sum += j;
             }
         }
         return sum;
@@ -195,8 +193,8 @@ public class Main {
      * Напишите программу, которая определяет, содержит ли заданный массив заданное значение.
      */
     public static boolean findNumber(int[] arr, int num) {
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == num) {
+        for (int j : arr) {
+            if (j == num) {
                 return true;
             }
         }
@@ -214,7 +212,7 @@ public class Main {
     /**
      * Задача 9. Напишите метод для поиска наибольшего числа в ArrayList<Integer>.
      */
-    public static int bigestElem(ArrayList<Integer> list) {
+    public static int biggestElem(ArrayList<Integer> list) {
         return list.stream().max(Integer::compare).get();
     }
 
@@ -237,7 +235,7 @@ public class Main {
      * Задача 12.Напишите метод, который проверяет, содержит ли ArrayList<Integer> заданное число.
      */
 
-    public static boolean findElemnt(ArrayList<Integer> list, Integer num) {
+    public static boolean findElement(ArrayList<Integer> list, Integer num) {
         return list.stream().anyMatch(num::equals);
     }
 
@@ -268,11 +266,11 @@ public class Main {
         System.out.println(result);
         for (int i = 0; i < result.size(); i++) {
             for (int j = 1 + i; j < result.size(); j++) {
-                if (result.get(i) == result.get(j)) {
+                if (result.get(i).equals(result.get(j))) {
                     result.remove(j);
+                    j--;
                 }
             }
-
         }
         return result;
     }
@@ -288,6 +286,7 @@ public class Main {
             if (list.get(i) == list.get(i - 1) + 1) {
                 count++;
                 maxSequence = Math.max(maxSequence, count);
+//                maxSequence = count > maxSequence ? count : maxSequence;
             } else {
                 count = 1;
             }
@@ -320,7 +319,7 @@ public class Main {
     public static ArrayList<Integer> removeDuplicate(ArrayList<Integer> list) {
         for (int i = 0; i < list.size(); i++) {
             for (int j = 1 + i; j < list.size(); j++) {
-                if (list.get(i) == list.get(j)) {
+                if (Objects.equals(list.get(i), list.get(j))) {
                     list.remove(j);
                     j--;
                 }
@@ -337,7 +336,7 @@ public class Main {
         int count = 0;
         for (int i = 0; i < list.size(); i++) {
             for (int j = 1 + i; j < list.size(); j++) {
-                if (list.get(i) == list.get(j)) {
+                if (Objects.equals(list.get(i), list.get(j))) {
                     list.remove(j);
                     j--;
                     count++;
