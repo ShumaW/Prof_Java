@@ -13,8 +13,8 @@ public class Main {
         System.out.println(reverseArrayToList(arr1));
 
         System.out.println("-".repeat(25) + " Task 3 " + "-".repeat(25));
-        Integer[] arr2 = {1, 1, 1, 5, 6, 8, 12, 89, 101, 25, 89};
-        Integer[] arr3 = {1, 5, 8, 7, 9, 2, 3};
+        int[] arr2 = {1, 1, 1, 5, 6, 8, 12, 89, 101, 25, 89};
+        int[] arr3 = {1, 5, 8, 7, 9, 2, 3};
         System.out.println(unionTwoArrays(arr2,arr3));
 
         System.out.println("-".repeat(25) + " Task 4 " + "-".repeat(25));
@@ -55,7 +55,7 @@ public class Main {
      * 3. Поиск пересечения: Напишите метод, который принимает два массива int и возвращает Set, содержащий элементы,
      * которые присутствуют и в первом, и во втором массивах. Уровень сложности: 5.
      */
-    public static Set<Integer> unionTwoArrays(Integer[] arr1, Integer[] arr2) {
+    public static Set<Integer> unionTwoArrays(int[] arr1, int[] arr2) {
 //        Set<Integer> set = new LinkedHashSet<>();
 //        for (int x : arr1) {
 //            set.add(x);
@@ -64,7 +64,7 @@ public class Main {
 //            set.add(x);
 //        }
 //        return set;
-        return Stream.concat(Arrays.stream(arr1),Arrays.stream(arr2)).collect(Collectors.toSet());
+        return Stream.concat(Arrays.stream(arr1).boxed(),Arrays.stream(arr2).boxed()).collect(Collectors.toSet());
     }
 
     /** 4. Подсчет уникальных элементов: Напишите метод, который принимает массив int и возвращает количество
