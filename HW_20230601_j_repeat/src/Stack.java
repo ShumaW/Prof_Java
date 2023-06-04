@@ -14,7 +14,6 @@ public class Stack<T> {  // LIFO
             this.value = value;
             this.next = next;
         }
-
         public Noda() {
         }
     }
