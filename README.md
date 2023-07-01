@@ -1,5 +1,9 @@
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=30&pause=1000&color=FFFFFF&width=435&lines=Prof_Java_HomeWork" alt="Typing SVG" /></a>
 
+HW_29.06.2023
+- [Main](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230629_j_repeat/src/main/java/org/example/Main.java)
+- [Person](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230629_j_repeat/src/main/java/org/example/Person.java)
+
 HW_22.06.2023 
 - [Main](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230622_j_repeat/src/main/java/org/example/Main.java)
 - [classStructure1](https://github.com/ShumaW/Prof_Java/tree/master/HW_20230622_j_repeat/src/main/java/org/example/classStructure1)
