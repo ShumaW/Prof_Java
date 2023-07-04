@@ -229,14 +229,9 @@ public class Main {
         // Дан список строк.Необходимо объединить все символы из всех строк, удалить дубликаты и отсортировать их
         // в лексикографическом порядке.
         System.out.println("-".repeat(25) + " 23 " + "-".repeat(25));
-        String collect = listStr.stream()
+        System.out.println(listStr.stream()
                 .map(String::toLowerCase)
-                .collect(joining());
-        char[] charArray = collect.toCharArray();
-        List<Character> characterList = IntStream.range(0, charArray.length)
-                .mapToObj(el -> charArray[el])
-                .toList();
-        System.out.println(characterList.stream()
+                .flatMap(str -> Arrays.stream(str.split("")))
                 .distinct()
                 .sorted()
                 .toList());
@@ -245,12 +240,12 @@ public class Main {
         // в диапазоне от 25 до 40 лет, отсортировать по имени и вывести результат.
         System.out.println("-".repeat(25) + " 24 " + "-".repeat(25));
         List<Person> personList = new ArrayList<>();
-        personList.add(new Person("Jack",22));
-        personList.add(new Person("Mike",33));
-        personList.add(new Person("Ann",32));
-        personList.add(new Person("Sem",56));
-        personList.add(new Person("Judith",13));
-        personList.add(new Person("Luck",28));
+        personList.add(new Person("Jack", 22));
+        personList.add(new Person("Mike", 33));
+        personList.add(new Person("Ann", 32));
+        personList.add(new Person("Sem", 56));
+        personList.add(new Person("Judith", 13));
+        personList.add(new Person("Luck", 28));
         System.out.println(personList.stream()
                 .filter(el -> el.getAge() >= 25 && el.getAge() <= 40)
                 .sorted()
