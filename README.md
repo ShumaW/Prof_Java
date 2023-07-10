@@ -1,5 +1,15 @@
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=30&pause=1000&color=FFFFFF&width=435&lines=Prof_Java_HomeWork" alt="Typing SVG" /></a>
 
+HW_06.07.2023
+- [Main](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230706_j_repeat/src/main/java/org/example/Main.java)
+- [Storage](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230706_j_repeat/src/main/java/org/example/Storage.java)
+- [Client](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230706_j_repeat/src/main/java/org/example/Client.java)
+- [BankCard](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230706_j_repeat/src/main/java/org/example/BankCard.java)
+- [Generator](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230706_j_repeat/src/main/java/org/example/Generator.java)
+- [Status](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230706_j_repeat/src/main/java/org/example/Status.java)
+- [Currency](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230706_j_repeat/src/main/java/org/example/Currency.java)
+
+
 HW_29.06.2023
 - [Main](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230629_j_repeat/src/main/java/org/example/Main.java)
 - [Person](https://github.com/ShumaW/Prof_Java/blob/master/HW_20230629_j_repeat/src/main/java/org/example/Person.java)
