@@ -7,7 +7,6 @@ import org.example.generator.Generator;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -23,10 +22,11 @@ public class Handler {
                 .toList();
     }
 
-    public static Map<Character, List<Developer>> groupingByGender() {
-        Map<Character, List<Developer>> map = developers.stream()
-                .collect(Collectors.groupingBy(Developer::getGender));
-        return map;
+    public static Map<Character, List<Car>> groupingByGender() {
+        return developers.stream()
+                .collect(Collectors.groupingBy(Developer::getGender,
+                        Collectors.mapping(Developer::getCar, Collectors.toList())));
+
     }
 
     public static Map<String, Integer> getMapOfDevelopers(){
