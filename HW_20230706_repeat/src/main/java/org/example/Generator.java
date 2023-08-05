@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Random;
 
 public class Generator {
-
     static List<String> codesCard = Arrays.asList("1234567887654321",
             "8745692136548974",
             "2645832116459874",
@@ -78,5 +77,15 @@ public class Generator {
 
     public static double getBalance() {
         return random.nextDouble(1_000_000);
+    }
+
+    public static Currency getRandomCurrency(){
+        Currency[] currencies = Currency.values();
+        return currencies[random.nextInt(currencies.length)];
+    }
+
+    public static Status getStatusBankCard(){
+        Status[] statuses = Status.values();
+        return statuses[random.nextInt(statuses.length)];
     }
 }

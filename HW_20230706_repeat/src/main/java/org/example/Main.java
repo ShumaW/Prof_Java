@@ -5,7 +5,7 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
 
-        final Map<Client, Double> clientDoubleMap = Storage.clientDoubleMap();
+        final Map<Client, Double> clientDoubleMap = Storage.clientDoubleMap(10);
         System.out.println("-".repeat(50));
 
         clientDoubleMap.entrySet().forEach(System.out::println);

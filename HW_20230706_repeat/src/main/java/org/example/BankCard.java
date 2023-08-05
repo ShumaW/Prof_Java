@@ -1,30 +1,12 @@
 package org.example;
 
-public class BankCard {
-    private final String bankCard;
-    private final Currency currency;
-    private final Status status;
+import lombok.Getter;
 
-    public BankCard(Currency currency, Status status) {
-        this.bankCard = Generator.addBankCard();
-        this.currency = currency;
-        this.status = status;
-    }
-
-    public String getBankCard() {
-        return bankCard;
-    }
-
-    public Currency getCurrency() {
-        return currency;
-    }
-
-    public Status getStatus() {
-        return status;
-    }
+@Getter
+public record BankCard(String bankCard, Currency currency, Status status) {
 
     @Override
     public String toString() {
-        return "BankCard: " + bankCard +", currency: " + currency + ", status: " + status;
+        return "BankCard: " + bankCard + ", currency: " + currency + ", status: " + status;
     }
 }

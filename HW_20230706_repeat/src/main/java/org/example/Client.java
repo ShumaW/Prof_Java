@@ -1,25 +1,21 @@
 package org.example;
 
+import lombok.Getter;
+
 public class Client {
     private final String name;
 
+    @Getter
     private final BankCard bankCard;
 
     private final Double balance;
 
-    public Client(BankCard bankCard) {
-        this.name = Generator.addNameOfClient();
+    public Client(String name,BankCard bankCard, Double balance) {
+        this.name = name;
         this.bankCard = bankCard;
-        this.balance = Generator.getBalance();
+        this.balance = balance;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public BankCard getBankCard() {
-        return bankCard;
-    }
 
     public double getBalance() {
         return balance;
