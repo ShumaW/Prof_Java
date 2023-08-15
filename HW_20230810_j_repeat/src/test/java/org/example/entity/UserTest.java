@@ -1,5 +1,7 @@
-package org.example;
+package org.example.entity;
 
+import org.example.entity.Role;
+import org.example.entity.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

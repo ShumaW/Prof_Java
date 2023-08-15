@@ -1,6 +1,10 @@
-package org.example;
+package org.example.service;
 
-import static org.example.UserDatabase.getUserByUsername;
+import org.example.entity.User;
+import org.example.exceptions.AccessBlockedException;
+import org.example.exceptions.NotFoundPasswordException;
+
+import static org.example.database.UserDatabase.getUserByUsername;
 
 public class AuthenticationService {
 

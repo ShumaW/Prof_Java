@@ -1,5 +1,9 @@
-package org.example;
+package org.example.service;
 
+import org.example.database.UserDatabase;
+import org.example.entity.User;
+import org.example.exceptions.AccessBlockedException;
+import org.example.service.AuthenticationService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

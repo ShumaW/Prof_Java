@@ -1,5 +1,10 @@
 package org.example;
 
+import org.example.database.UserDatabase;
+import org.example.entity.Role;
+import org.example.entity.User;
+import org.example.service.AuthenticationService;
+
 public class Main {
     public static void main(String[] args) {
 

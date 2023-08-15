@@ -1,7 +1,8 @@
-package org.example;
+package org.example.database;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.example.entity.User;
 
 import java.util.ArrayList;
 import java.util.List;

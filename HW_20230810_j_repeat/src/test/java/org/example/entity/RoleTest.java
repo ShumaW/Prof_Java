@@ -1,5 +1,6 @@
-package org.example;
+package org.example.entity;
 
+import org.example.entity.Role;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
