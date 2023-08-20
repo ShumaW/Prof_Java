@@ -6,30 +6,17 @@ import org.example.service.ParsedFile;
 
 import java.util.*;
 import java.util.stream.Collectors;
-/*
-   - Написать методы которые находят:
-*  ай ди всех компаний
-*  самый дорогой СНЭК
-*  какого товара больше всего на складе в деньгах
-*  какого  ДРИНКС товара меньше всего на складе в деньгах
-*  количество видов акционного товара у ФУД
-*  сгруппировать по упакованным и нет
-*  у какого ДРИНКС самая высокая маржа
-*  средняя маржа по категории
-*  первые три товара ФУД которые участвуют в акции и у которых самая низкая маржа
-*  поместить в три мапу отсортировав в ай ди. #37 - это ай ди.
-*  самый дешевый товар которого меньше всего на складе осталось в кг или штуках в зависимости от ISPACKED
-    */
 
 public class ProductController {
     public static final ParsedFile parsedFile = MyParseJSON.parse("src/main/resources/report.json");
 
+    // Id всех компаний
     public List<Integer> getFactorysId() {
         return parsedFile.getParsedProducts().stream()
                 .map(Product::getProductId)
                 .toList();
     }
-
+    // самый дорогой СНЭК
     public List<Product> getMostExpensiveSnack() {
         return parsedFile.getParsedProducts().stream()
                 .filter(item -> item.getCategory().equals("SNACKS"))
@@ -37,6 +24,7 @@ public class ProductController {
                 .limit(1).toList();
     }
 
+    // какого товара больше всего на складе в деньгах
     public List<Product> getMostInStockInMoney() {
         return parsedFile.getParsedProducts().stream()
                 .sorted(ProductController::compareToMostExpensive)
@@ -44,7 +32,8 @@ public class ProductController {
                 .toList();
     }
 
-    public List<Product> getLeastInStockInMoney() {
+    // какого  ДРИНКС товара меньше всего на складе в деньгах
+    public List<Product> getLeastDrinksInStockInMoney() {
         return parsedFile.getParsedProducts().stream()
                 .filter(item -> item.getCategory().equals("DRINKS"))
                 .sorted(ProductController::compareToCheapest)
@@ -52,6 +41,7 @@ public class ProductController {
                 .toList();
     }
 
+    // количество видов акционного товара у ФУД
     public long getCountActionInCategoryFood(){
         return parsedFile.getParsedProducts().stream()
                 .filter(item -> item.getCategory().equals("FOOD"))
@@ -59,11 +49,13 @@ public class ProductController {
                 .count();
     }
 
+    // сгруппировать по упакованным и нет
     public Map<Boolean, List<Product>> getPackagesAndNoPackagesProduct(){
         return parsedFile.getParsedProducts().stream()
                 .collect(Collectors.groupingBy(Product::getIsPacked));
     }
 
+    // у какого ДРИНКС самая высокая маржа
     public List<Product> getHighestMarginInDrinks(){
         return parsedFile.getParsedProducts().stream()
                 .filter(item -> item.getCategory().equals("DRINKS"))
@@ -72,12 +64,14 @@ public class ProductController {
                 .toList();
     }
 
+    // средняя маржа по категории
     public Map<String, Double> getAdvMarginInCategory(){
         return parsedFile.getParsedProducts().stream()
                 .collect(Collectors.groupingBy(Product::getCategory,
                         Collectors.averagingDouble(Product::getMargin)));
     }
 
+    // первые три товара ФУД которые участвуют в акции и у которых самая низкая маржа
     public List<Product> getThreeCheapestFoodIsAdv() {
         return parsedFile.getParsedProducts().stream()
                 .filter(item -> item.getCategory().equals("FOOD") && item.getIsAdv())
@@ -86,14 +80,17 @@ public class ProductController {
                 .toList();
     }
 
+    // поместить в три мапу отсортировав в ай ди. #37 - это ай ди.
     public Map<Integer, Product> getTreeMapIdProduct() {
         return parsedFile.getParsedProducts().stream()
                 .collect(Collectors.toMap(Product::getProductId, item -> item,
                         (oldValue, newValue) -> newValue, TreeMap::new));
     }
 
+    // самый дешевый товар которого меньше всего на складе осталось в кг или штуках в зависимости от ISPACKED
     public List<Product> getCheapestProductInStock(){
         return parsedFile.getParsedProducts().stream()
+                .filter(Product::getIsPacked)
                 .sorted(ProductController::compareToCheapest)
                 .limit(1)
                 .toList();

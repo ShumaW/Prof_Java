@@ -16,7 +16,7 @@ public class Main {
         System.out.println(controller.getMostInStockInMoney());
         System.out.println("-".repeat(25) + " 4 " + "-".repeat(25));
 
-        System.out.println(controller.getLeastInStockInMoney());
+        System.out.println(controller.getLeastDrinksInStockInMoney());
         System.out.println("-".repeat(25) + " 5 " + "-".repeat(25));
 
         System.out.println(controller.getCountActionInCategoryFood());
