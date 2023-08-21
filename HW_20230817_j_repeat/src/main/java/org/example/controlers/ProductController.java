@@ -80,7 +80,7 @@ public class ProductController {
     public List<Product> getThreeCheapestFoodIsAdv() {
         return parsedFile.getParsedProducts().stream()
                 .filter(item -> item.getCategory().equals("FOOD") && item.getIsAdv())
-                .sorted(Comparator.comparing(Product::getPrice))
+                .sorted(Comparator.comparing(Product::getMargin))
                 .limit(3)
                 .toList();
     }
