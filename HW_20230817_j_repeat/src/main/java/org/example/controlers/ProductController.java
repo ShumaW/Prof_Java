@@ -8,7 +8,12 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class ProductController {
-    public static final ParsedFile parsedFile = MyParseJSON.parse("src/main/resources/report.json");
+
+    public static ParsedFile parsedFile;
+
+    public ProductController(String filePath) {
+        parsedFile = MyParseJSON.parse(filePath);
+    }
 
     // Id всех компаний
     public List<Integer> getFactorysId() {

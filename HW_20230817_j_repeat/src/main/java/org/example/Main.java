@@ -5,7 +5,7 @@ import org.example.controlers.ProductController;
 public class Main {
     public static void main(String[] args) {
 
-        ProductController controller = new ProductController();
+        ProductController controller = new ProductController("src/main/resources/report.json");
         System.out.println("-".repeat(25) + " 1 " + "-".repeat(25));
         System.out.println(controller.getFactorysId());
         System.out.println("-".repeat(25) + " 2 " + "-".repeat(25));
