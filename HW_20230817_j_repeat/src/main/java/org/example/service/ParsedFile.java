@@ -11,10 +11,6 @@ public class ParsedFile {
 
     private List<Product> parsedProducts;
 
-    public ParsedFile(List<Product> products) {
-        this.parsedProducts = products;
-    }
-
     public ParsedFile() {
     }
 

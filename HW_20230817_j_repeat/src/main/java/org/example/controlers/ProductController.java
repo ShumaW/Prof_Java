@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 public class ProductController {
 
-    public static ParsedFile parsedFile;
+    private static ParsedFile parsedFile;
 
     public ProductController(String filePath) {
         parsedFile = MyParseJSON.parse(filePath);
