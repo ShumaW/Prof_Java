@@ -1,6 +1,6 @@
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=30&pause=1000&color=FFFFFF&width=435&lines=Prof_Java_HomeWork" alt="Typing SVG" /></a>
 
-[HW_24.08.2023]()
+[HW_24.08.2023](https://github.com/ShumaW/Prof_Java/tree/master/HW_20230824_j_repeat/src/main/java/org/example)
 
 [HW_22.08.2023](https://github.com/ShumaW/Prof_Java/tree/master/HW_20230822_j_repeat/src)
 
