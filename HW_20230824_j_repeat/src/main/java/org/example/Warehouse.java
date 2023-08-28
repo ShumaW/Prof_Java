@@ -28,8 +28,8 @@ public class Warehouse {
         if (amount <= 0) {
             throw new IllegalArgumentException();
         }
-        for(int i = 1; i <= amount; i++) {
-            while(capacity == 0){
+        for (int i = 1; i <= amount; i++) {
+            while (availableItems >= capacity) {
                 try {
                     System.out.println("Producer waiting.");
                     wait();
@@ -39,8 +39,8 @@ public class Warehouse {
             }
             notifyAll();
             availableItems++;
-            capacity--;
-            System.out.println("There are " + capacity + " spaces left in stock");
+//            capacity--;
+            System.out.println("There are " + (capacity - availableItems) + " spaces left in stock");
             try {
                 sleep(1000);
             } catch (InterruptedException e) {
@@ -53,8 +53,8 @@ public class Warehouse {
         if (amount < 0) {
             throw new IllegalArgumentException();
         }
-        for (int i = 1; i <= amount ; i++) {
-            while(availableItems == 0){
+        for (int i = 1; i <= amount; i++) {
+            while (availableItems == 0) {
                 try {
                     System.out.println("Consumer waiting.");
                     wait();
@@ -64,7 +64,7 @@ public class Warehouse {
             }
             notifyAll();
             availableItems--;
-            capacity++;
+//            capacity++;
             System.out.println(availableItems + " items left in stock");
             try {
                 sleep(500);
