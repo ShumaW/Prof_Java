@@ -13,7 +13,7 @@ package org.example;
 import static java.lang.Thread.sleep;
 
 public class Warehouse {
-    private int capacity;
+    private final int capacity;
     private volatile int availableItems;
 
     public Warehouse(int capacity, int availableItems) {
@@ -39,7 +39,6 @@ public class Warehouse {
             }
             notifyAll();
             availableItems++;
-//            capacity--;
             System.out.println("There are " + (capacity - availableItems) + " spaces left in stock");
             try {
                 sleep(1000);
@@ -64,7 +63,6 @@ public class Warehouse {
             }
             notifyAll();
             availableItems--;
-//            capacity++;
             System.out.println(availableItems + " items left in stock");
             try {
                 sleep(500);
