@@ -10,8 +10,11 @@ package org.example;
 Если товаров недостаточно, блокирует поток до появления достаточного количества товаров.
  */
 
+import lombok.Getter;
+
 import static java.lang.Thread.sleep;
 
+@Getter
 public class Warehouse {
     private final int capacity;
     private volatile int availableItems;
@@ -23,6 +26,8 @@ public class Warehouse {
         this.capacity = capacity;
         this.availableItems = availableItems;
     }
+
+
 
     public synchronized void produce(int amount) {
         if (amount <= 0) {

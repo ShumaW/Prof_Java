@@ -16,7 +16,7 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        Warehouse warehouse = new Warehouse(10, 10);
+        Warehouse warehouse = new Warehouse(10, 0);
         Producer producer = new Producer(warehouse);
         Consumer consumer = new Consumer(warehouse);
 
